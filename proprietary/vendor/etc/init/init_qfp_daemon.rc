@@ -1,0 +1,98 @@
+# Copyright (c) 2018 Qualcomm Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+#
+
+service qfp-daemon /vendor/bin/qfp-daemon
+    class late_start
+    user system
+    group system drmrpc diag input
+
+on post-fs-data
+    #Create directories for Fingerprint
+    mkdir /data/vendor/misc 01771 system system
+    mkdir /data/vendor/misc/qti_fp 0770 system system
+    mkdir /persist/qti_fp 0770 system system
+    mkdir /mnt/vendor/persist/qti_fp 0770 system system
+    #ASUS_BSP add for IMS config
+    setprop ro.hardware.fp_position back
+    setprop ro.hardware.fp_shape square
+    setprop persist.sys.fp.navigation 1
+    setprop persist.vendor.asus.fp.wakeup_support true
+    setprop persist.vendor.asus.fp.wakeup true
+    #ASUS_BSP add for qfp_config.txt
+    #copy /vendor/etc/qfp_config.txt /data/vendor/misc/qti_fp/qfp_config.txt
+    #chmod 666 /data/vendor/misc/qti_fp/qfp_config.txt
+    #ASUS_BSP add by QTI request
+    setprop persist.vendor.qfp.enable_cbge 1
+    setprop persist.vendor.qfp.enable_ipc 1
+    setprop persist.vendor.qfp.enable_pv 6
+    setprop log.tag.QFP 3
+    
+    mkdir /data/vendor/misc/qti_fp/templates 0775 system system
+    
+    mkdir /data/vendor/misc/qti_fp/templates/20x30 0775 system system
+    mkdir /data/vendor/misc/qti_fp/templates/20x30/dfan 0775 system system
+    copy /vendor/etc/templates/20x30/dfan/dfan1.pgm /data/vendor/misc/qti_fp/templates/20x30/dfan/dfan1.pgm
+    copy /vendor/etc/templates/20x30/dfan/dfan2.pgm /data/vendor/misc/qti_fp/templates/20x30/dfan/dfan2.pgm
+    copy /vendor/etc/templates/20x30/dfan/dfan3.pgm /data/vendor/misc/qti_fp/templates/20x30/dfan/dfan3.pgm
+    copy /vendor/etc/templates/20x30/dfan/dfan4.pgm /data/vendor/misc/qti_fp/templates/20x30/dfan/dfan4.pgm
+    copy /vendor/etc/templates/20x30/dfan/dfan5.pgm /data/vendor/misc/qti_fp/templates/20x30/dfan/dfan5.pgm
+    chmod 775 /data/vendor/misc/qti_fp/templates/20x30/dfan/dfan1.pgm
+    chmod 775 /data/vendor/misc/qti_fp/templates/20x30/dfan/dfan2.pgm
+    chmod 775 /data/vendor/misc/qti_fp/templates/20x30/dfan/dfan3.pgm
+    chmod 775 /data/vendor/misc/qti_fp/templates/20x30/dfan/dfan4.pgm
+    chmod 775 /data/vendor/misc/qti_fp/templates/20x30/dfan/dfan5.pgm
+    mkdir /data/vendor/misc/qti_fp/templates/20x30/slant 0775 system system
+    copy /vendor/etc/templates/20x30/slant/slant1.pgm /data/vendor/misc/qti_fp/templates/20x30/slant/slant1.pgm
+    copy /vendor/etc/templates/20x30/slant/slant2.pgm /data/vendor/misc/qti_fp/templates/20x30/slant/slant2.pgm
+    chmod 775 /data/vendor/misc/qti_fp/templates/20x30/slant/slant1.pgm
+    chmod 775 /data/vendor/misc/qti_fp/templates/20x30/slant/slant2.pgm
+    
+    mkdir /data/vendor/misc/qti_fp/templates/4x9 0775 system system
+    mkdir /data/vendor/misc/qti_fp/templates/4x9/dfan 0775 system system
+    copy /vendor/etc/templates/4x9/dfan/dfan1.pgm /data/vendor/misc/qti_fp/templates/4x9/dfan/dfan1.pgm
+    copy /vendor/etc/templates/4x9/dfan/dfan2.pgm /data/vendor/misc/qti_fp/templates/4x9/dfan/dfan2.pgm
+    copy /vendor/etc/templates/4x9/dfan/dfan3.pgm /data/vendor/misc/qti_fp/templates/4x9/dfan/dfan3.pgm
+    copy /vendor/etc/templates/4x9/dfan/dfan4.pgm /data/vendor/misc/qti_fp/templates/4x9/dfan/dfan4.pgm
+    chmod 775 /data/vendor/misc/qti_fp/templates/4x9/dfan/dfan1.pgm
+    chmod 775 /data/vendor/misc/qti_fp/templates/4x9/dfan/dfan2.pgm
+    chmod 775 /data/vendor/misc/qti_fp/templates/4x9/dfan/dfan3.pgm
+    chmod 775 /data/vendor/misc/qti_fp/templates/4x9/dfan/dfan4.pgm
+    mkdir /data/vendor/misc/qti_fp/templates/4x9/slant 0775 system system
+    copy /vendor/etc/templates/4x9/slant/slant1.pgm /data/vendor/misc/qti_fp/templates/4x9/slant/slant1.pgm
+    copy /vendor/etc/templates/4x9/slant/slant2.pgm /data/vendor/misc/qti_fp/templates/4x9/slant/slant2.pgm
+    copy /vendor/etc/templates/4x9/slant/slant3.pgm /data/vendor/misc/qti_fp/templates/4x9/slant/slant3.pgm
+    copy /vendor/etc/templates/4x9/slant/slant4.pgm /data/vendor/misc/qti_fp/templates/4x9/slant/slant4.pgm
+    chmod 775 /data/vendor/misc/qti_fp/templates/4x9/slant/slant1.pgm
+    chmod 775 /data/vendor/misc/qti_fp/templates/4x9/slant/slant2.pgm
+    chmod 775 /data/vendor/misc/qti_fp/templates/4x9/slant/slant3.pgm
+    chmod 775 /data/vendor/misc/qti_fp/templates/4x9/slant/slant4.pgm
+    
+    mkdir /data/vendor/misc/qti_fp/templates/8x8 0775 system system
+    mkdir /data/vendor/misc/qti_fp/templates/8x8/dfan 0775 system system
+    copy /vendor/etc/templates/8x8/dfan/dfan1.PGM /data/vendor/misc/qti_fp/templates/8x8/dfan/dfan1.PGM
+    copy /vendor/etc/templates/8x8/dfan/dfan2.PGM /data/vendor/misc/qti_fp/templates/8x8/dfan/dfan2.PGM
+    copy /vendor/etc/templates/8x8/dfan/dfan3.PGM /data/vendor/misc/qti_fp/templates/8x8/dfan/dfan3.PGM
+    copy /vendor/etc/templates/8x8/dfan/dfan4.PGM /data/vendor/misc/qti_fp/templates/8x8/dfan/dfan4.PGM
+    chmod 775 /data/vendor/misc/qti_fp/templates/8x8/dfan/dfan1.PGM
+    chmod 775 /data/vendor/misc/qti_fp/templates/8x8/dfan/dfan2.PGM
+    chmod 775 /data/vendor/misc/qti_fp/templates/8x8/dfan/dfan3.PGM
+    chmod 775 /data/vendor/misc/qti_fp/templates/8x8/dfan/dfan4.PGM
+    mkdir /data/vendor/misc/qti_fp/templates/8x8/slant 0775 system system
+    copy /vendor/etc/templates/8x8/slant/slant1.pgm /data/vendor/misc/qti_fp/templates/8x8/slant/slant1.pgm
+    copy /vendor/etc/templates/8x8/slant/slant2.pgm /data/vendor/misc/qti_fp/templates/8x8/slant/slant2.pgm
+    copy /vendor/etc/templates/8x8/slant/slant3.pgm /data/vendor/misc/qti_fp/templates/8x8/slant/slant3.pgm
+    copy /vendor/etc/templates/8x8/slant/slant4.pgm /data/vendor/misc/qti_fp/templates/8x8/slant/slant4.pgm
+    chmod 775 /data/vendor/misc/qti_fp/templates/8x8/slant/slant1.pgm
+    chmod 775 /data/vendor/misc/qti_fp/templates/8x8/slant/slant2.pgm
+    chmod 775 /data/vendor/misc/qti_fp/templates/8x8/slant/slant3.pgm
+    chmod 775 /data/vendor/misc/qti_fp/templates/8x8/slant/slant4.pgm
+
+on property:persist.vendor.asus.startlog=0
+    copy /vendor/etc/qfp_config.txt /data/vendor/misc/qti_fp/qfp_config.txt
+    chmod 666 /data/vendor/misc/qti_fp/qfp_config.txt
+	
+on property:persist.vendor.asus.startlog=1
+    copy /vendor/etc/qfp_config_dbg.txt /data/vendor/misc/qti_fp/qfp_config.txt
+    chmod 666 /data/vendor/misc/qti_fp/qfp_config.txt
