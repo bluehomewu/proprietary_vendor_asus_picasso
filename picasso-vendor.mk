@@ -25,6 +25,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/system_ext/framework/com.qti.dpmframework.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/com.qti.dpmframework.jar \
     vendor/asus/picasso/proprietary/system_ext/framework/dpmapi.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/dpmapi.jar \
     vendor/asus/picasso/proprietary/system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.hardware.alarm-V1.0-java.jar \
+    vendor/asus/picasso/proprietary/system_ext/framework/vendor.qti.hardware.fingerprint-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.hardware.fingerprint-V1.0-java.jar \
     vendor/asus/picasso/proprietary/system_ext/lib/com.qualcomm.qti.dpm.api@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/com.qualcomm.qti.dpm.api@1.0.so \
     vendor/asus/picasso/proprietary/system_ext/lib/libdpmctmgr.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libdpmctmgr.so \
     vendor/asus/picasso/proprietary/system_ext/lib/libdpmfdmgr.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libdpmfdmgr.so \
@@ -55,6 +56,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/system_ext/lib64/vendor.qti.gnss@3.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.gnss@3.0.so \
     vendor/asus/picasso/proprietary/system_ext/lib64/vendor.qti.gnss@4.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.gnss@4.0.so \
     vendor/asus/picasso/proprietary/system_ext/lib64/vendor.qti.imsrtpservice@3.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.imsrtpservice@3.0.so \
+    vendor/asus/picasso/proprietary/vendor/bin/LightFingerprintPosition.sh:$(TARGET_COPY_OUT_VENDOR)/bin/LightFingerprintPosition.sh \
     vendor/asus/picasso/proprietary/vendor/bin/adpl:$(TARGET_COPY_OUT_VENDOR)/bin/adpl \
     vendor/asus/picasso/proprietary/vendor/bin/adsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/adsprpcd \
     vendor/asus/picasso/proprietary/vendor/bin/cdsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/cdsprpcd \
@@ -64,9 +66,9 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/bin/dpmQmiMgr:$(TARGET_COPY_OUT_VENDOR)/bin/dpmQmiMgr \
     vendor/asus/picasso/proprietary/vendor/bin/dspservice:$(TARGET_COPY_OUT_VENDOR)/bin/dspservice \
     vendor/asus/picasso/proprietary/vendor/bin/dualcam_default_cali.bin:$(TARGET_COPY_OUT_VENDOR)/bin/dualcam_default_cali.bin \
-    vendor/asus/picasso/proprietary/vendor/bin/fp_cali_mv:$(TARGET_COPY_OUT_VENDOR)/bin/fp_cali_mv \
+    vendor/asus/picasso/proprietary/vendor/bin/firmware_version.sh:$(TARGET_COPY_OUT_VENDOR)/bin/firmware_version.sh \
     vendor/asus/picasso/proprietary/vendor/bin/garden_app:$(TARGET_COPY_OUT_VENDOR)/bin/garden_app \
-    vendor/asus/picasso/proprietary/vendor/bin/gf_ver.sh:$(TARGET_COPY_OUT_VENDOR)/bin/gf_ver.sh \
+    vendor/asus/picasso/proprietary/vendor/bin/gaugeIC_status:$(TARGET_COPY_OUT_VENDOR)/bin/gaugeIC_status \
     vendor/asus/picasso/proprietary/vendor/bin/hdcp1prov:$(TARGET_COPY_OUT_VENDOR)/bin/hdcp1prov \
     vendor/asus/picasso/proprietary/vendor/bin/hdcp2p2prov:$(TARGET_COPY_OUT_VENDOR)/bin/hdcp2p2prov \
     vendor/asus/picasso/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_VENDOR)/bin/hvdcp_opti \
@@ -76,6 +78,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/bin/hw/android.hardware.drm@1.3-service.widevine:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.3-service.widevine \
     vendor/asus/picasso/proprietary/vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.gatekeeper@1.0-service-qti \
     vendor/asus/picasso/proprietary/vendor/bin/hw/android.hardware.gnss@2.1-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.gnss@2.1-service-qti \
+    vendor/asus/picasso/proprietary/vendor/bin/hw/android.hardware.health@2.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.health@2.1-service \
     vendor/asus/picasso/proprietary/vendor/bin/hw/android.hardware.keymaster@4.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.0-service-qti \
     vendor/asus/picasso/proprietary/vendor/bin/hw/android.hardware.keymaster@4.0-strongbox-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.0-strongbox-service-qti \
     vendor/asus/picasso/proprietary/vendor/bin/hw/android.hardware.keymaster@4.1-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.1-service-qti \
@@ -101,7 +104,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/bin/hw/vendor.qti.hardware.trustedui@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.trustedui@1.0-service-qti \
     vendor/asus/picasso/proprietary/vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti \
     vendor/asus/picasso/proprietary/vendor/bin/hw/vendor.qti.media.c2@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.media.c2@1.0-service \
-    vendor/asus/picasso/proprietary/vendor/bin/hw/vendor.qti.secure_element@1.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.secure_element@1.2-service \
     vendor/asus/picasso/proprietary/vendor/bin/ims_rtp_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ims_rtp_daemon \
     vendor/asus/picasso/proprietary/vendor/bin/imsdaemon:$(TARGET_COPY_OUT_VENDOR)/bin/imsdaemon \
     vendor/asus/picasso/proprietary/vendor/bin/init.asus.zram.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.asus.zram.sh \
@@ -136,6 +138,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/bin/ppd:$(TARGET_COPY_OUT_VENDOR)/bin/ppd \
     vendor/asus/picasso/proprietary/vendor/bin/qdcmss:$(TARGET_COPY_OUT_VENDOR)/bin/qdcmss \
     vendor/asus/picasso/proprietary/vendor/bin/qdss_qmi_helper:$(TARGET_COPY_OUT_VENDOR)/bin/qdss_qmi_helper \
+    vendor/asus/picasso/proprietary/vendor/bin/qfp-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/qfp-daemon \
     vendor/asus/picasso/proprietary/vendor/bin/qmipriod:$(TARGET_COPY_OUT_VENDOR)/bin/qmipriod \
     vendor/asus/picasso/proprietary/vendor/bin/qrtr-cfg:$(TARGET_COPY_OUT_VENDOR)/bin/qrtr-cfg \
     vendor/asus/picasso/proprietary/vendor/bin/qrtr-lookup:$(TARGET_COPY_OUT_VENDOR)/bin/qrtr-lookup \
@@ -144,6 +147,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/bin/qti:$(TARGET_COPY_OUT_VENDOR)/bin/qti \
     vendor/asus/picasso/proprietary/vendor/bin/qtigetprop:$(TARGET_COPY_OUT_VENDOR)/bin/qtigetprop \
     vendor/asus/picasso/proprietary/vendor/bin/qtisetprop:$(TARGET_COPY_OUT_VENDOR)/bin/qtisetprop \
+    vendor/asus/picasso/proprietary/vendor/bin/read_battery_id_status:$(TARGET_COPY_OUT_VENDOR)/bin/read_battery_id_status \
     vendor/asus/picasso/proprietary/vendor/bin/rmt_storage:$(TARGET_COPY_OUT_VENDOR)/bin/rmt_storage \
     vendor/asus/picasso/proprietary/vendor/bin/sensors.qti:$(TARGET_COPY_OUT_VENDOR)/bin/sensors.qti \
     vendor/asus/picasso/proprietary/vendor/bin/shsusrd:$(TARGET_COPY_OUT_VENDOR)/bin/shsusrd \
@@ -160,14 +164,14 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/bin/vmmgr:$(TARGET_COPY_OUT_VENDOR)/bin/vmmgr \
     vendor/asus/picasso/proprietary/vendor/bin/vppservice:$(TARGET_COPY_OUT_VENDOR)/bin/vppservice \
     vendor/asus/picasso/proprietary/vendor/bin/xtra-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/xtra-daemon \
-    vendor/asus/picasso/proprietary/vendor/etc/acdbdata/ZS675KW/ZS675KW_Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/ZS675KW/ZS675KW_Bluetooth_cal.acdb \
-    vendor/asus/picasso/proprietary/vendor/etc/acdbdata/ZS675KW/ZS675KW_General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/ZS675KW/ZS675KW_General_cal.acdb \
-    vendor/asus/picasso/proprietary/vendor/etc/acdbdata/ZS675KW/ZS675KW_Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/ZS675KW/ZS675KW_Global_cal.acdb \
-    vendor/asus/picasso/proprietary/vendor/etc/acdbdata/ZS675KW/ZS675KW_Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/ZS675KW/ZS675KW_Handset_cal.acdb \
-    vendor/asus/picasso/proprietary/vendor/etc/acdbdata/ZS675KW/ZS675KW_Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/ZS675KW/ZS675KW_Hdmi_cal.acdb \
-    vendor/asus/picasso/proprietary/vendor/etc/acdbdata/ZS675KW/ZS675KW_Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/ZS675KW/ZS675KW_Headset_cal.acdb \
-    vendor/asus/picasso/proprietary/vendor/etc/acdbdata/ZS675KW/ZS675KW_Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/ZS675KW/ZS675KW_Speaker_cal.acdb \
-    vendor/asus/picasso/proprietary/vendor/etc/acdbdata/ZS675KW/ZS675KW_workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/ZS675KW/ZS675KW_workspaceFile.qwsp \
+    vendor/asus/picasso/proprietary/vendor/etc/acdbdata/Picasso/Picasso_Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Picasso/Picasso_Bluetooth_cal.acdb \
+    vendor/asus/picasso/proprietary/vendor/etc/acdbdata/Picasso/Picasso_General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Picasso/Picasso_General_cal.acdb \
+    vendor/asus/picasso/proprietary/vendor/etc/acdbdata/Picasso/Picasso_Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Picasso/Picasso_Global_cal.acdb \
+    vendor/asus/picasso/proprietary/vendor/etc/acdbdata/Picasso/Picasso_Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Picasso/Picasso_Handset_cal.acdb \
+    vendor/asus/picasso/proprietary/vendor/etc/acdbdata/Picasso/Picasso_Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Picasso/Picasso_Hdmi_cal.acdb \
+    vendor/asus/picasso/proprietary/vendor/etc/acdbdata/Picasso/Picasso_Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Picasso/Picasso_Headset_cal.acdb \
+    vendor/asus/picasso/proprietary/vendor/etc/acdbdata/Picasso/Picasso_Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Picasso/Picasso_Speaker_cal.acdb \
+    vendor/asus/picasso/proprietary/vendor/etc/acdbdata/Picasso/Picasso_workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Picasso/Picasso_workspaceFile.qwsp \
     vendor/asus/picasso/proprietary/vendor/etc/acdbdata/adsp_avs_config.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/adsp_avs_config.acdb \
     vendor/asus/picasso/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.00.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.00.pmd \
     vendor/asus/picasso/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.10.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.10.pmd \
@@ -177,20 +181,19 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd \
     vendor/asus/picasso/proprietary/vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.10.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.10.pmd \
     vendor/asus/picasso/proprietary/vendor/etc/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
-    vendor/asus/picasso/proprietary/vendor/etc/audio/ZS675KW/audio_io_policy_ZS675KW.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio/ZS675KW/audio_io_policy_ZS675KW.conf \
-    vendor/asus/picasso/proprietary/vendor/etc/audio/ZS675KW/audio_policy_configuration_ZS675KW.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/ZS675KW/audio_policy_configuration_ZS675KW.xml \
-    vendor/asus/picasso/proprietary/vendor/etc/audio/ZS675KW/audio_policy_volumes_ZS675KW.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/ZS675KW/audio_policy_volumes_ZS675KW.xml \
-    vendor/asus/picasso/proprietary/vendor/etc/audio/ZS675KW/default_volume_tables_ZS675KW.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/ZS675KW/default_volume_tables_ZS675KW.xml \
-    vendor/asus/picasso/proprietary/vendor/etc/audio/ZS675KW/mixer_paths_ZS675KW.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/ZS675KW/mixer_paths_ZS675KW.xml \
-    vendor/asus/picasso/proprietary/vendor/etc/audio/ZS675KW/mixer_paths_ZS675KW_EU.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/ZS675KW/mixer_paths_ZS675KW_EU.xml \
-    vendor/asus/picasso/proprietary/vendor/etc/audio/ZS675KW/r_submix_audio_policy_configuration_ZS675KW.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/ZS675KW/r_submix_audio_policy_configuration_ZS675KW.xml \
-    vendor/asus/picasso/proprietary/vendor/etc/audio/sku_lahaina/audio_platform_info_intcodec_ZS675KW.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_lahaina/audio_platform_info_intcodec_ZS675KW.xml \
+    vendor/asus/picasso/proprietary/vendor/etc/audio/picasso/audio_effects_picasso.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/picasso/audio_effects_picasso.xml \
+    vendor/asus/picasso/proprietary/vendor/etc/audio/picasso/audio_io_policy_picasso.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio/picasso/audio_io_policy_picasso.conf \
+    vendor/asus/picasso/proprietary/vendor/etc/audio/picasso/audio_platform_info_intcodec_picasso.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/picasso/audio_platform_info_intcodec_picasso.xml \
+    vendor/asus/picasso/proprietary/vendor/etc/audio/picasso/audio_policy_configuration_picasso.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/picasso/audio_policy_configuration_picasso.xml \
+    vendor/asus/picasso/proprietary/vendor/etc/audio/picasso/audio_policy_volumes_picasso.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/picasso/audio_policy_volumes_picasso.xml \
+    vendor/asus/picasso/proprietary/vendor/etc/audio/picasso/default_volume_tables_picasso.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/picasso/default_volume_tables_picasso.xml \
+    vendor/asus/picasso/proprietary/vendor/etc/audio/picasso/mixer_paths_picasso.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/picasso/mixer_paths_picasso.xml \
+    vendor/asus/picasso/proprietary/vendor/etc/audio/picasso/r_submix_audio_policy_configuration_picasso.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/picasso/r_submix_audio_policy_configuration_picasso.xml \
+    vendor/asus/picasso/proprietary/vendor/etc/audio/picasso/sound_trigger_mixer_paths_picasso.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/picasso/sound_trigger_mixer_paths_picasso.xml \
     vendor/asus/picasso/proprietary/vendor/etc/camera/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt \
-    vendor/asus/picasso/proprietary/vendor/etc/camera/vidhance_calibration:$(TARGET_COPY_OUT_VENDOR)/etc/camera/vidhance_calibration \
+    vendor/asus/picasso/proprietary/vendor/etc/camera/eisoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/eisoverridesettings.txt \
     vendor/asus/picasso/proprietary/vendor/etc/charger_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fstab.qti \
     vendor/asus/picasso/proprietary/vendor/etc/charger_fw_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fw_fstab.qti \
-    vendor/asus/picasso/proprietary/vendor/etc/cne/profileSlm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/profileSlm.xml \
-    vendor/asus/picasso/proprietary/vendor/etc/cne/slm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/cne/slm.conf \
     vendor/asus/picasso/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile1.xml \
     vendor/asus/picasso/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile2.xml \
     vendor/asus/picasso/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile3.xml \
@@ -224,8 +227,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/etc/data/dsi_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/dsi_config.xml \
     vendor/asus/picasso/proprietary/vendor/etc/data/netmgr_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/netmgr_config.xml \
     vendor/asus/picasso/proprietary/vendor/etc/default-permissions/com.qualcomm.qti.cne.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default-permissions/com.qualcomm.qti.cne.xml \
-    vendor/asus/picasso/proprietary/vendor/etc/dirac/interfacedb:$(TARGET_COPY_OUT_VENDOR)/etc/dirac/interfacedb \
-    vendor/asus/picasso/proprietary/vendor/etc/diracvdd.bin:$(TARGET_COPY_OUT_VENDOR)/etc/diracvdd.bin \
     vendor/asus/picasso/proprietary/vendor/etc/display/DPU660.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU660.xml \
     vendor/asus/picasso/proprietary/vendor/etc/display/DPU670.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU670.xml \
     vendor/asus/picasso/proprietary/vendor/etc/display/DPU7__.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU7__.xml \
@@ -238,6 +239,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.3-service.widevine.rc \
     vendor/asus/picasso/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
     vendor/asus/picasso/proprietary/vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gnss@2.1-service-qti.rc \
+    vendor/asus/picasso/proprietary/vendor/etc/init/android.hardware.health@2.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.health@2.1-service.rc \
     vendor/asus/picasso/proprietary/vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.1-service-qti.rc \
     vendor/asus/picasso/proprietary/vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc \
     vendor/asus/picasso/proprietary/vendor/etc/init/android.hardware.sensors@2.0-service-multihal.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.sensors@2.0-service-multihal.rc \
@@ -249,12 +251,11 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/etc/init/ims_rtp_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ims_rtp_daemon.rc \
     vendor/asus/picasso/proprietary/vendor/etc/init/imsdaemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsdaemon.rc \
     vendor/asus/picasso/proprietary/vendor/etc/init/init-qcril-data.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init-qcril-data.rc \
-    vendor/asus/picasso/proprietary/vendor/etc/init/init.aw8697.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.aw8697.rc \
-    vendor/asus/picasso/proprietary/vendor/etc/init/init.goodixfp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.goodixfp.rc \
     vendor/asus/picasso/proprietary/vendor/etc/init/init.qti.media.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.media.rc \
     vendor/asus/picasso/proprietary/vendor/etc/init/init.qti.qcv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.qcv.rc \
     vendor/asus/picasso/proprietary/vendor/etc/init/init.time_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.time_daemon.rc \
     vendor/asus/picasso/proprietary/vendor/etc/init/init.vendor.sensors.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.sensors.rc \
+    vendor/asus/picasso/proprietary/vendor/etc/init/init_qfp_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init_qfp_daemon.rc \
     vendor/asus/picasso/proprietary/vendor/etc/init/init_thermal-engine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init_thermal-engine.rc \
     vendor/asus/picasso/proprietary/vendor/etc/init/ipa_fws.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ipa_fws.rc \
     vendor/asus/picasso/proprietary/vendor/etc/init/ipacm-diag.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ipacm-diag.rc \
@@ -295,7 +296,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/etc/init/vendor.qti.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.media.c2@1.0-service.rc \
     vendor/asus/picasso/proprietary/vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.qspmhal@1.0-service.rc \
     vendor/asus/picasso/proprietary/vendor/etc/init/vendor.qti.rmt_storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.rmt_storage.rc \
-    vendor/asus/picasso/proprietary/vendor/etc/init/vendor.qti.secure_element@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.secure_element@1.2-service.rc \
     vendor/asus/picasso/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
     vendor/asus/picasso/proprietary/vendor/etc/init/vendor.sensors.qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.qti.rc \
     vendor/asus/picasso/proprietary/vendor/etc/init/vendor.sensors.sscrpcd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.sscrpcd.rc \
@@ -425,7 +425,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/etc/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
     vendor/asus/picasso/proprietary/vendor/etc/media/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media/video_system_specs.json \
     vendor/asus/picasso/proprietary/vendor/etc/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
-    vendor/asus/picasso/proprietary/vendor/etc/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
     vendor/asus/picasso/proprietary/vendor/etc/media_codecs_lahaina.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_lahaina.xml \
     vendor/asus/picasso/proprietary/vendor/etc/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
     vendor/asus/picasso/proprietary/vendor/etc/media_codecs_performance_lahaina.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_lahaina.xml \
@@ -441,6 +440,9 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/etc/perf/targetconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetconfig.xml \
     vendor/asus/picasso/proprietary/vendor/etc/perf/targetresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetresourceconfigs.xml \
     vendor/asus/picasso/proprietary/vendor/etc/permissions/android.hardware.light.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.light.xml \
+    vendor/asus/picasso/proprietary/vendor/etc/permissions/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
+    vendor/asus/picasso/proprietary/vendor/etc/permissions/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
+    vendor/asus/picasso/proprietary/vendor/etc/permissions/qti_fingerprint_interface.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/qti_fingerprint_interface.xml \
     vendor/asus/picasso/proprietary/vendor/etc/permissions/vendor.qti.hardware.factory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.qti.hardware.factory.xml \
     vendor/asus/picasso/proprietary/vendor/etc/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml \
     vendor/asus/picasso/proprietary/vendor/etc/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
@@ -457,6 +459,8 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/etc/qcril_database/upgrade/other/5_version_update_ecc_table_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/5_version_update_ecc_table_qcrilnr.sql \
     vendor/asus/picasso/proprietary/vendor/etc/qcril_database/upgrade/other/6_version_change_property_table_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/6_version_change_property_table_qcrilnr.sql \
     vendor/asus/picasso/proprietary/vendor/etc/qcril_database/upgrade/other/7_version_update_ecc_table_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/7_version_update_ecc_table_qcrilnr.sql \
+    vendor/asus/picasso/proprietary/vendor/etc/qfp_config.txt:$(TARGET_COPY_OUT_VENDOR)/etc/qfp_config.txt \
+    vendor/asus/picasso/proprietary/vendor/etc/qfp_config_dbg.txt:$(TARGET_COPY_OUT_VENDOR)/etc/qfp_config_dbg.txt \
     vendor/asus/picasso/proprietary/vendor/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
     vendor/asus/picasso/proprietary/vendor/etc/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config \
     vendor/asus/picasso/proprietary/vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.base-arm.policy \
@@ -480,12 +484,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/etc/sensors/config/lahaina_dynamic_sensors.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/lahaina_dynamic_sensors.json \
     vendor/asus/picasso/proprietary/vendor/etc/sensors/config/lahaina_icm4x6xx_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/lahaina_icm4x6xx_0.json \
     vendor/asus/picasso/proprietary/vendor/etc/sensors/config/lahaina_irq.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/lahaina_irq.json \
-    vendor/asus/picasso/proprietary/vendor/etc/sensors/config/lahaina_mmc5603x_R5D_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/lahaina_mmc5603x_R5D_0.json \
-    vendor/asus/picasso/proprietary/vendor/etc/sensors/config/lahaina_mmc5603x_R5ER1_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/lahaina_mmc5603x_R5ER1_0.json \
-    vendor/asus/picasso/proprietary/vendor/etc/sensors/config/lahaina_mmc5603x_R5ER2_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/lahaina_mmc5603x_R5ER2_0.json \
-    vendor/asus/picasso/proprietary/vendor/etc/sensors/config/lahaina_mmc5603x_R5PR_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/lahaina_mmc5603x_R5PR_0.json \
     vendor/asus/picasso/proprietary/vendor/etc/sensors/config/lahaina_power_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/lahaina_power_0.json \
-    vendor/asus/picasso/proprietary/vendor/etc/sensors/config/mmc5603x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/mmc5603x_0.json \
     vendor/asus/picasso/proprietary/vendor/etc/sensors/config/sns_amd.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_amd.json \
     vendor/asus/picasso/proprietary/vendor/etc/sensors/config/sns_amd_sw_disabled.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_amd_sw_disabled.json \
     vendor/asus/picasso/proprietary/vendor/etc/sensors/config/sns_amd_sw_enabled.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_amd_sw_enabled.json \
@@ -528,6 +527,29 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/etc/ssg/ta_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/ssg/ta_config.json \
     vendor/asus/picasso/proprietary/vendor/etc/ssg/tz_whitelist.json:$(TARGET_COPY_OUT_VENDOR)/etc/ssg/tz_whitelist.json \
     vendor/asus/picasso/proprietary/vendor/etc/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json \
+    vendor/asus/picasso/proprietary/vendor/etc/templates/20x30/dfan/dfan1.pgm:$(TARGET_COPY_OUT_VENDOR)/etc/templates/20x30/dfan/dfan1.pgm \
+    vendor/asus/picasso/proprietary/vendor/etc/templates/20x30/dfan/dfan2.pgm:$(TARGET_COPY_OUT_VENDOR)/etc/templates/20x30/dfan/dfan2.pgm \
+    vendor/asus/picasso/proprietary/vendor/etc/templates/20x30/dfan/dfan3.pgm:$(TARGET_COPY_OUT_VENDOR)/etc/templates/20x30/dfan/dfan3.pgm \
+    vendor/asus/picasso/proprietary/vendor/etc/templates/20x30/dfan/dfan4.pgm:$(TARGET_COPY_OUT_VENDOR)/etc/templates/20x30/dfan/dfan4.pgm \
+    vendor/asus/picasso/proprietary/vendor/etc/templates/20x30/dfan/dfan5.pgm:$(TARGET_COPY_OUT_VENDOR)/etc/templates/20x30/dfan/dfan5.pgm \
+    vendor/asus/picasso/proprietary/vendor/etc/templates/20x30/slant/slant1.pgm:$(TARGET_COPY_OUT_VENDOR)/etc/templates/20x30/slant/slant1.pgm \
+    vendor/asus/picasso/proprietary/vendor/etc/templates/20x30/slant/slant2.pgm:$(TARGET_COPY_OUT_VENDOR)/etc/templates/20x30/slant/slant2.pgm \
+    vendor/asus/picasso/proprietary/vendor/etc/templates/4x9/dfan/dfan1.pgm:$(TARGET_COPY_OUT_VENDOR)/etc/templates/4x9/dfan/dfan1.pgm \
+    vendor/asus/picasso/proprietary/vendor/etc/templates/4x9/dfan/dfan2.pgm:$(TARGET_COPY_OUT_VENDOR)/etc/templates/4x9/dfan/dfan2.pgm \
+    vendor/asus/picasso/proprietary/vendor/etc/templates/4x9/dfan/dfan3.pgm:$(TARGET_COPY_OUT_VENDOR)/etc/templates/4x9/dfan/dfan3.pgm \
+    vendor/asus/picasso/proprietary/vendor/etc/templates/4x9/dfan/dfan4.pgm:$(TARGET_COPY_OUT_VENDOR)/etc/templates/4x9/dfan/dfan4.pgm \
+    vendor/asus/picasso/proprietary/vendor/etc/templates/4x9/slant/slant1.pgm:$(TARGET_COPY_OUT_VENDOR)/etc/templates/4x9/slant/slant1.pgm \
+    vendor/asus/picasso/proprietary/vendor/etc/templates/4x9/slant/slant2.pgm:$(TARGET_COPY_OUT_VENDOR)/etc/templates/4x9/slant/slant2.pgm \
+    vendor/asus/picasso/proprietary/vendor/etc/templates/4x9/slant/slant3.pgm:$(TARGET_COPY_OUT_VENDOR)/etc/templates/4x9/slant/slant3.pgm \
+    vendor/asus/picasso/proprietary/vendor/etc/templates/4x9/slant/slant4.pgm:$(TARGET_COPY_OUT_VENDOR)/etc/templates/4x9/slant/slant4.pgm \
+    vendor/asus/picasso/proprietary/vendor/etc/templates/8x8/dfan/dfan1.PGM:$(TARGET_COPY_OUT_VENDOR)/etc/templates/8x8/dfan/dfan1.PGM \
+    vendor/asus/picasso/proprietary/vendor/etc/templates/8x8/dfan/dfan2.PGM:$(TARGET_COPY_OUT_VENDOR)/etc/templates/8x8/dfan/dfan2.PGM \
+    vendor/asus/picasso/proprietary/vendor/etc/templates/8x8/dfan/dfan3.PGM:$(TARGET_COPY_OUT_VENDOR)/etc/templates/8x8/dfan/dfan3.PGM \
+    vendor/asus/picasso/proprietary/vendor/etc/templates/8x8/dfan/dfan4.PGM:$(TARGET_COPY_OUT_VENDOR)/etc/templates/8x8/dfan/dfan4.PGM \
+    vendor/asus/picasso/proprietary/vendor/etc/templates/8x8/slant/slant1.pgm:$(TARGET_COPY_OUT_VENDOR)/etc/templates/8x8/slant/slant1.pgm \
+    vendor/asus/picasso/proprietary/vendor/etc/templates/8x8/slant/slant2.pgm:$(TARGET_COPY_OUT_VENDOR)/etc/templates/8x8/slant/slant2.pgm \
+    vendor/asus/picasso/proprietary/vendor/etc/templates/8x8/slant/slant3.pgm:$(TARGET_COPY_OUT_VENDOR)/etc/templates/8x8/slant/slant3.pgm \
+    vendor/asus/picasso/proprietary/vendor/etc/templates/8x8/slant/slant4.pgm:$(TARGET_COPY_OUT_VENDOR)/etc/templates/8x8/slant/slant4.pgm \
     vendor/asus/picasso/proprietary/vendor/etc/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
     vendor/asus/picasso/proprietary/vendor/etc/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/video_system_specs.json \
     vendor/asus/picasso/proprietary/vendor/etc/vmmgr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/vmmgr.conf \
@@ -567,11 +589,8 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/firmware/adsp.b24:$(TARGET_COPY_OUT_VENDOR)/firmware/adsp.b24 \
     vendor/asus/picasso/proprietary/vendor/firmware/adsp.b25:$(TARGET_COPY_OUT_VENDOR)/firmware/adsp.b25 \
     vendor/asus/picasso/proprietary/vendor/firmware/adsp.b26:$(TARGET_COPY_OUT_VENDOR)/firmware/adsp.b26 \
-    vendor/asus/picasso/proprietary/vendor/firmware/adsp.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/adsp.mbn \
     vendor/asus/picasso/proprietary/vendor/firmware/adsp.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/adsp.mdt \
     vendor/asus/picasso/proprietary/vendor/firmware/amss.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/amss.bin \
-    vendor/asus/picasso/proprietary/vendor/firmware/aw8697_haptic.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aw8697_haptic.bin \
-    vendor/asus/picasso/proprietary/vendor/firmware/bdwlan.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.elf \
     vendor/asus/picasso/proprietary/vendor/firmware/cdsp.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/cdsp.b00 \
     vendor/asus/picasso/proprietary/vendor/firmware/cdsp.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/cdsp.b01 \
     vendor/asus/picasso/proprietary/vendor/firmware/cdsp.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/cdsp.b02 \
@@ -589,22 +608,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/firmware/cdsp.b14:$(TARGET_COPY_OUT_VENDOR)/firmware/cdsp.b14 \
     vendor/asus/picasso/proprietary/vendor/firmware/cdsp.b15:$(TARGET_COPY_OUT_VENDOR)/firmware/cdsp.b15 \
     vendor/asus/picasso/proprietary/vendor/firmware/cdsp.b16:$(TARGET_COPY_OUT_VENDOR)/firmware/cdsp.b16 \
-    vendor/asus/picasso/proprietary/vendor/firmware/cdsp.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/cdsp.mbn \
     vendor/asus/picasso/proprietary/vendor/firmware/cdsp.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/cdsp.mdt \
-    vendor/asus/picasso/proprietary/vendor/firmware/cs35l45-rcv-dsp1-spk-cali.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l45-rcv-dsp1-spk-cali.bin \
-    vendor/asus/picasso/proprietary/vendor/firmware/cs35l45-rcv-dsp1-spk-cali.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l45-rcv-dsp1-spk-cali.wmfw \
-    vendor/asus/picasso/proprietary/vendor/firmware/cs35l45-rcv-dsp1-spk-prot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l45-rcv-dsp1-spk-prot.bin \
-    vendor/asus/picasso/proprietary/vendor/firmware/cs35l45-rcv-dsp1-spk-prot.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l45-rcv-dsp1-spk-prot.wmfw \
-    vendor/asus/picasso/proprietary/vendor/firmware/cs35l45-rcv-music.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l45-rcv-music.txt \
-    vendor/asus/picasso/proprietary/vendor/firmware/cs35l45-rcv-outdoor.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l45-rcv-outdoor.txt \
-    vendor/asus/picasso/proprietary/vendor/firmware/cs35l45-rcv-voice.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l45-rcv-voice.txt \
-    vendor/asus/picasso/proprietary/vendor/firmware/cs35l45-spk-dsp1-spk-cali.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l45-spk-dsp1-spk-cali.bin \
-    vendor/asus/picasso/proprietary/vendor/firmware/cs35l45-spk-dsp1-spk-cali.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l45-spk-dsp1-spk-cali.wmfw \
-    vendor/asus/picasso/proprietary/vendor/firmware/cs35l45-spk-dsp1-spk-prot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l45-spk-dsp1-spk-prot.bin \
-    vendor/asus/picasso/proprietary/vendor/firmware/cs35l45-spk-dsp1-spk-prot.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l45-spk-dsp1-spk-prot.wmfw \
-    vendor/asus/picasso/proprietary/vendor/firmware/cs35l45-spk-music.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l45-spk-music.txt \
-    vendor/asus/picasso/proprietary/vendor/firmware/cs35l45-spk-outdoor.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l45-spk-outdoor.txt \
-    vendor/asus/picasso/proprietary/vendor/firmware/cs35l45-spk-voice.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l45-spk-voice.txt \
     vendor/asus/picasso/proprietary/vendor/firmware/evass.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b01 \
     vendor/asus/picasso/proprietary/vendor/firmware/evass.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b02 \
     vendor/asus/picasso/proprietary/vendor/firmware/evass.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b03 \
@@ -626,24 +630,15 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/firmware/evass.b19:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b19 \
     vendor/asus/picasso/proprietary/vendor/firmware/evass.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.mbn \
     vendor/asus/picasso/proprietary/vendor/firmware/evass.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.mdt \
-    vendor/asus/picasso/proprietary/vendor/firmware/goodixfp64.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp64.b00 \
-    vendor/asus/picasso/proprietary/vendor/firmware/goodixfp64.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp64.b01 \
-    vendor/asus/picasso/proprietary/vendor/firmware/goodixfp64.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp64.b02 \
-    vendor/asus/picasso/proprietary/vendor/firmware/goodixfp64.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp64.b03 \
-    vendor/asus/picasso/proprietary/vendor/firmware/goodixfp64.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp64.b04 \
-    vendor/asus/picasso/proprietary/vendor/firmware/goodixfp64.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp64.b05 \
-    vendor/asus/picasso/proprietary/vendor/firmware/goodixfp64.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp64.b06 \
-    vendor/asus/picasso/proprietary/vendor/firmware/goodixfp64.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp64.b07 \
-    vendor/asus/picasso/proprietary/vendor/firmware/goodixfp64.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp64.mdt \
-    vendor/asus/picasso/proprietary/vendor/firmware/goodixfp64_er1.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp64_er1.b00 \
-    vendor/asus/picasso/proprietary/vendor/firmware/goodixfp64_er1.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp64_er1.b01 \
-    vendor/asus/picasso/proprietary/vendor/firmware/goodixfp64_er1.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp64_er1.b02 \
-    vendor/asus/picasso/proprietary/vendor/firmware/goodixfp64_er1.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp64_er1.b03 \
-    vendor/asus/picasso/proprietary/vendor/firmware/goodixfp64_er1.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp64_er1.b04 \
-    vendor/asus/picasso/proprietary/vendor/firmware/goodixfp64_er1.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp64_er1.b05 \
-    vendor/asus/picasso/proprietary/vendor/firmware/goodixfp64_er1.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp64_er1.b06 \
-    vendor/asus/picasso/proprietary/vendor/firmware/goodixfp64_er1.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp64_er1.b07 \
-    vendor/asus/picasso/proprietary/vendor/firmware/goodixfp64_er1.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/goodixfp64_er1.mdt \
+    vendor/asus/picasso/proprietary/vendor/firmware/fingerpr.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/fingerpr.b00 \
+    vendor/asus/picasso/proprietary/vendor/firmware/fingerpr.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/fingerpr.b01 \
+    vendor/asus/picasso/proprietary/vendor/firmware/fingerpr.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/fingerpr.b02 \
+    vendor/asus/picasso/proprietary/vendor/firmware/fingerpr.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/fingerpr.b03 \
+    vendor/asus/picasso/proprietary/vendor/firmware/fingerpr.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/fingerpr.b04 \
+    vendor/asus/picasso/proprietary/vendor/firmware/fingerpr.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/fingerpr.b05 \
+    vendor/asus/picasso/proprietary/vendor/firmware/fingerpr.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/fingerpr.b06 \
+    vendor/asus/picasso/proprietary/vendor/firmware/fingerpr.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/fingerpr.b07 \
+    vendor/asus/picasso/proprietary/vendor/firmware/fingerpr.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/fingerpr.mdt \
     vendor/asus/picasso/proprietary/vendor/firmware/hdcpsrm.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/hdcpsrm.b00 \
     vendor/asus/picasso/proprietary/vendor/firmware/hdcpsrm.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/hdcpsrm.b01 \
     vendor/asus/picasso/proprietary/vendor/firmware/hdcpsrm.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/hdcpsrm.b02 \
@@ -654,27 +649,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/firmware/hdcpsrm.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/hdcpsrm.b07 \
     vendor/asus/picasso/proprietary/vendor/firmware/hdcpsrm.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/hdcpsrm.mbn \
     vendor/asus/picasso/proprietary/vendor/firmware/hdcpsrm.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/hdcpsrm.mdt \
-    vendor/asus/picasso/proprietary/vendor/firmware/image/eseservice.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/image/eseservice.b00 \
-    vendor/asus/picasso/proprietary/vendor/firmware/image/eseservice.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/image/eseservice.b01 \
-    vendor/asus/picasso/proprietary/vendor/firmware/image/eseservice.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/image/eseservice.b02 \
-    vendor/asus/picasso/proprietary/vendor/firmware/image/eseservice.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/image/eseservice.b03 \
-    vendor/asus/picasso/proprietary/vendor/firmware/image/eseservice.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/image/eseservice.b04 \
-    vendor/asus/picasso/proprietary/vendor/firmware/image/eseservice.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/image/eseservice.b05 \
-    vendor/asus/picasso/proprietary/vendor/firmware/image/eseservice.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/image/eseservice.b06 \
-    vendor/asus/picasso/proprietary/vendor/firmware/image/eseservice.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/image/eseservice.b07 \
-    vendor/asus/picasso/proprietary/vendor/firmware/image/eseservice.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/image/eseservice.mbn \
-    vendor/asus/picasso/proprietary/vendor/firmware/image/eseservice.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/image/eseservice.mdt \
-    vendor/asus/picasso/proprietary/vendor/firmware/image/gpqese.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/image/gpqese.b00 \
-    vendor/asus/picasso/proprietary/vendor/firmware/image/gpqese.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/image/gpqese.b01 \
-    vendor/asus/picasso/proprietary/vendor/firmware/image/gpqese.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/image/gpqese.b02 \
-    vendor/asus/picasso/proprietary/vendor/firmware/image/gpqese.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/image/gpqese.b03 \
-    vendor/asus/picasso/proprietary/vendor/firmware/image/gpqese.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/image/gpqese.b04 \
-    vendor/asus/picasso/proprietary/vendor/firmware/image/gpqese.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/image/gpqese.b05 \
-    vendor/asus/picasso/proprietary/vendor/firmware/image/gpqese.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/image/gpqese.b06 \
-    vendor/asus/picasso/proprietary/vendor/firmware/image/gpqese.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/image/gpqese.b07 \
-    vendor/asus/picasso/proprietary/vendor/firmware/image/gpqese.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/image/gpqese.mbn \
-    vendor/asus/picasso/proprietary/vendor/firmware/image/gpqese.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/image/gpqese.mdt \
-    vendor/asus/picasso/proprietary/vendor/firmware/image/gptauuid.xml:$(TARGET_COPY_OUT_VENDOR)/firmware/image/gptauuid.xml \
     vendor/asus/picasso/proprietary/vendor/firmware/ipa_fws.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.b00 \
     vendor/asus/picasso/proprietary/vendor/firmware/ipa_fws.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.b01 \
     vendor/asus/picasso/proprietary/vendor/firmware/ipa_fws.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.b02 \
@@ -739,6 +713,10 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/firmware/vpu20_4v_unsigned.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v_unsigned.mbn \
     vendor/asus/picasso/proprietary/vendor/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini \
     vendor/asus/picasso/proprietary/vendor/lib/btaudio_offload_if.so:$(TARGET_COPY_OUT_VENDOR)/lib/btaudio_offload_if.so \
+    vendor/asus/picasso/proprietary/vendor/lib/com.qualcomm.qti.imscmservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.imscmservice@1.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib/com.qualcomm.qti.imscmservice@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.imscmservice@2.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib/com.qualcomm.qti.imscmservice@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.imscmservice@2.1.so \
+    vendor/asus/picasso/proprietary/vendor/lib/com.qualcomm.qti.imscmservice@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.imscmservice@2.2.so \
     vendor/asus/picasso/proprietary/vendor/lib/egl/eglSubDriverAndroid.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/eglSubDriverAndroid.so \
     vendor/asus/picasso/proprietary/vendor/lib/egl/libEGL_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libEGL_adreno.so \
     vendor/asus/picasso/proprietary/vendor/lib/egl/libGLESv1_CM_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libGLESv1_CM_adreno.so \
@@ -746,6 +724,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib/egl/libq3dtools_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libq3dtools_adreno.so \
     vendor/asus/picasso/proprietary/vendor/lib/egl/libq3dtools_esx.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libq3dtools_esx.so \
     vendor/asus/picasso/proprietary/vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so \
+    vendor/asus/picasso/proprietary/vendor/lib/hw/android.hardware.health@2.0-impl-2.1-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.health@2.0-impl-2.1-qti.so \
     vendor/asus/picasso/proprietary/vendor/lib/hw/audio.bluetooth_qti.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.bluetooth_qti.default.so \
     vendor/asus/picasso/proprietary/vendor/lib/hw/audio.primary.lahaina.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.lahaina.so \
     vendor/asus/picasso/proprietary/vendor/lib/hw/com.dsi.ant@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/com.dsi.ant@1.0-impl.so \
@@ -754,7 +733,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so \
     vendor/asus/picasso/proprietary/vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so \
     vendor/asus/picasso/proprietary/vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so \
-    vendor/asus/picasso/proprietary/vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.fm@1.0-impl.so \
     vendor/asus/picasso/proprietary/vendor/lib/hw/vendor.qti.hardware.servicetracker@1.2-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.servicetracker@1.2-impl.so \
     vendor/asus/picasso/proprietary/vendor/lib/hw/vulkan.adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vulkan.adreno.so \
     vendor/asus/picasso/proprietary/vendor/lib/libAlacSwDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libAlacSwDec.so \
@@ -793,6 +771,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib/libaudioalsa.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudioalsa.so \
     vendor/asus/picasso/proprietary/vendor/lib/libaudioconfigstore.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudioconfigstore.so \
     vendor/asus/picasso/proprietary/vendor/lib/libaudioparsers.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudioparsers.so \
+    vendor/asus/picasso/proprietary/vendor/lib/libbatterylistener.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbatterylistener.so \
     vendor/asus/picasso/proprietary/vendor/lib/libbluetooth_audio_session_qti.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbluetooth_audio_session_qti.so \
     vendor/asus/picasso/proprietary/vendor/lib/libbt-hidlclient.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbt-hidlclient.so \
     vendor/asus/picasso/proprietary/vendor/lib/libbtnv.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbtnv.so \
@@ -801,8 +780,12 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib/libcapiv2svacnn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcapiv2svacnn.so \
     vendor/asus/picasso/proprietary/vendor/lib/libcapiv2svarnn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcapiv2svarnn.so \
     vendor/asus/picasso/proprietary/vendor/lib/libcapiv2vop.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcapiv2vop.so \
+    vendor/asus/picasso/proprietary/vendor/lib/libcne.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcne.so \
+    vendor/asus/picasso/proprietary/vendor/lib/libcneapiclient.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcneapiclient.so \
+    vendor/asus/picasso/proprietary/vendor/lib/libcneoplookup.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcneoplookup.so \
+    vendor/asus/picasso/proprietary/vendor/lib/libcneqmiutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcneqmiutils.so \
     vendor/asus/picasso/proprietary/vendor/lib/libdiag.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdiag.so \
-    vendor/asus/picasso/proprietary/vendor/lib/libdiracgefwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdiracgefwrapper.so \
+    vendor/asus/picasso/proprietary/vendor/lib/libdpmqmihal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdpmqmihal.so \
     vendor/asus/picasso/proprietary/vendor/lib/libdrc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdrc.so \
     vendor/asus/picasso/proprietary/vendor/lib/libdsd2pcm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdsd2pcm.so \
     vendor/asus/picasso/proprietary/vendor/lib/libfastcrc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfastcrc.so \
@@ -821,10 +804,13 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib/libmdmdetect.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmdmdetect.so \
     vendor/asus/picasso/proprietary/vendor/lib/libmmosal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmosal.so \
     vendor/asus/picasso/proprietary/vendor/lib/libmulawdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmulawdec.so \
+    vendor/asus/picasso/proprietary/vendor/lib/libnetmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnetmgr.so \
+    vendor/asus/picasso/proprietary/vendor/lib/libnetmgr_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnetmgr_common.so \
+    vendor/asus/picasso/proprietary/vendor/lib/libnetmgr_nr_fusion.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnetmgr_nr_fusion.so \
+    vendor/asus/picasso/proprietary/vendor/lib/libnetmgr_rmnet_ext.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnetmgr_rmnet_ext.so \
     vendor/asus/picasso/proprietary/vendor/lib/libperfconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib/libperfconfig.so \
     vendor/asus/picasso/proprietary/vendor/lib/libperfgluelayer.so:$(TARGET_COPY_OUT_VENDOR)/lib/libperfgluelayer.so \
     vendor/asus/picasso/proprietary/vendor/lib/libperfioctl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libperfioctl.so \
-    vendor/asus/picasso/proprietary/vendor/lib/libpn557_fw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpn557_fw.so \
     vendor/asus/picasso/proprietary/vendor/lib/libqc2colorconvertfilter.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqc2colorconvertfilter.so \
     vendor/asus/picasso/proprietary/vendor/lib/libqc2filter.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqc2filter.so \
     vendor/asus/picasso/proprietary/vendor/lib/libqc2vppfilter.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqc2vppfilter.so \
@@ -838,6 +824,13 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib/libqcodec2_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcodec2_utils.so \
     vendor/asus/picasso/proprietary/vendor/lib/libqcodec2_v4l2codec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcodec2_v4l2codec.so \
     vendor/asus/picasso/proprietary/vendor/lib/libqconfigclient.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqconfigclient.so \
+    vendor/asus/picasso/proprietary/vendor/lib/libqcrilNr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcrilNr.so \
+    vendor/asus/picasso/proprietary/vendor/lib/libqcrilNrFramework.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcrilNrFramework.so \
+    vendor/asus/picasso/proprietary/vendor/lib/libqcrilNrLogger.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcrilNrLogger.so \
+    vendor/asus/picasso/proprietary/vendor/lib/libqcrilNrQtiBus.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcrilNrQtiBus.so \
+    vendor/asus/picasso/proprietary/vendor/lib/libqcrilNrQtiMutex.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcrilNrQtiMutex.so \
+    vendor/asus/picasso/proprietary/vendor/lib/libqcrildatactl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqcrildatactl.so \
+    vendor/asus/picasso/proprietary/vendor/lib/libqfp-service.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqfp-service.so \
     vendor/asus/picasso/proprietary/vendor/lib/libqmi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmi.so \
     vendor/asus/picasso/proprietary/vendor/lib/libqmi_cci.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmi_cci.so \
     vendor/asus/picasso/proprietary/vendor/lib/libqmi_client_helper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmi_client_helper.so \
@@ -857,6 +850,15 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib/libqti-util.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqti-util.so \
     vendor/asus/picasso/proprietary/vendor/lib/libqti-utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqti-utils.so \
     vendor/asus/picasso/proprietary/vendor/lib/libqtigef.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqtigef.so \
+    vendor/asus/picasso/proprietary/vendor/lib/libril-db.so:$(TARGET_COPY_OUT_VENDOR)/lib/libril-db.so \
+    vendor/asus/picasso/proprietary/vendor/lib/libril-qc-ltedirectdisc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libril-qc-ltedirectdisc.so \
+    vendor/asus/picasso/proprietary/vendor/lib/libril-qc-radioconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib/libril-qc-radioconfig.so \
+    vendor/asus/picasso/proprietary/vendor/lib/libril-qcril-hook-oem.so:$(TARGET_COPY_OUT_VENDOR)/lib/libril-qcril-hook-oem.so \
+    vendor/asus/picasso/proprietary/vendor/lib/libril.so:$(TARGET_COPY_OUT_VENDOR)/lib/libril.so \
+    vendor/asus/picasso/proprietary/vendor/lib/librilqmimiscservices.so:$(TARGET_COPY_OUT_VENDOR)/lib/librilqmimiscservices.so \
+    vendor/asus/picasso/proprietary/vendor/lib/librilqmiservices.so:$(TARGET_COPY_OUT_VENDOR)/lib/librilqmiservices.so \
+    vendor/asus/picasso/proprietary/vendor/lib/librilutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/librilutils.so \
+    vendor/asus/picasso/proprietary/vendor/lib/libsensor_hal_l5.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsensor_hal_l5.so \
     vendor/asus/picasso/proprietary/vendor/lib/libskewknob.so:$(TARGET_COPY_OUT_VENDOR)/lib/libskewknob.so \
     vendor/asus/picasso/proprietary/vendor/lib/libsmemlog.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsmemlog.so \
     vendor/asus/picasso/proprietary/vendor/lib/libsmwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsmwrapper.so \
@@ -869,8 +871,9 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib/libvideooptfeature.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvideooptfeature.so \
     vendor/asus/picasso/proprietary/vendor/lib/libvideoutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvideoutils.so \
     vendor/asus/picasso/proprietary/vendor/lib/modules/modules.blocklist:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.blocklist \
+    vendor/asus/picasso/proprietary/vendor/lib/qcrilMarshal.so:$(TARGET_COPY_OUT_VENDOR)/lib/qcrilMarshal.so \
+    vendor/asus/picasso/proprietary/vendor/lib/qcrild_libqcrilnrutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/qcrild_libqcrilnrutils.so \
     vendor/asus/picasso/proprietary/vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so \
-    vendor/asus/picasso/proprietary/vendor/lib/rfsa/adsp/dirac_resource.dar:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/dirac_resource.dar \
     vendor/asus/picasso/proprietary/vendor/lib/rfsa/adsp/libQ6MSFR_manager_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libQ6MSFR_manager_skel.so \
     vendor/asus/picasso/proprietary/vendor/lib/rfsa/adsp/libQnnHtpAltPrepSkel.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libQnnHtpAltPrepSkel.so \
     vendor/asus/picasso/proprietary/vendor/lib/rfsa/adsp/libVppQnnHtp.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libVppQnnHtp.so \
@@ -879,7 +882,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib/rfsa/adsp/libbitml_nsp_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libbitml_nsp_skel.so \
     vendor/asus/picasso/proprietary/vendor/lib/rfsa/adsp/libcamera_nn_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libcamera_nn_skel.so \
     vendor/asus/picasso/proprietary/vendor/lib/rfsa/adsp/libcvpdsp_2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libcvpdsp_2_1.so \
-    vendor/asus/picasso/proprietary/vendor/lib/rfsa/adsp/libdirac-capiv2.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libdirac-capiv2.so \
     vendor/asus/picasso/proprietary/vendor/lib/rfsa/adsp/libdspCV_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libdspCV_skel.so \
     vendor/asus/picasso/proprietary/vendor/lib/rfsa/adsp/libdsp_streamer_binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libdsp_streamer_binning.so \
     vendor/asus/picasso/proprietary/vendor/lib/rfsa/adsp/libfastcvadsp.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libfastcvadsp.so \
@@ -891,52 +893,106 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libsns_low_lat_stream_skel.so \
     vendor/asus/picasso/proprietary/vendor/lib/rfsa/adsp/libsuper_res_networks.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libsuper_res_networks.so \
     vendor/asus/picasso/proprietary/vendor/lib/rfsa/adsp/libvpt_action_recognition.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libvpt_action_recognition.so \
+    vendor/asus/picasso/proprietary/vendor/lib/sensors.hal.tof.so:$(TARGET_COPY_OUT_VENDOR)/lib/sensors.hal.tof.so \
     vendor/asus/picasso/proprietary/vendor/lib/soundfx/libasphere.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libasphere.so \
-    vendor/asus/picasso/proprietary/vendor/lib/soundfx/libdiraceffect.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libdiraceffect.so \
     vendor/asus/picasso/proprietary/vendor/lib/soundfx/libqcbassboost.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcbassboost.so \
     vendor/asus/picasso/proprietary/vendor/lib/soundfx/libqcreverb.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcreverb.so \
     vendor/asus/picasso/proprietary/vendor/lib/soundfx/libqcvirt.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcvirt.so \
     vendor/asus/picasso/proprietary/vendor/lib/soundfx/libshoebox.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libshoebox.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.data.factory@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.data.factory@2.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.data.factory@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.data.factory@2.1.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.data.factory@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.data.factory@2.2.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.data.mwqem@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.data.mwqem@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.bluetooth_sar@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.bluetooth_sar@1.1.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.data.cne.internal.api@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.data.cne.internal.api@1.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.data.cne.internal.constants@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.data.cne.internal.constants@1.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.data.cne.internal.server@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.data.cne.internal.server@1.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.data.connection@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.data.connection@1.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.data.connection@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.data.connection@1.1.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.data.dynamicdds@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.data.dynamicdds@1.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.data.iwlan@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.data.iwlan@1.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.data.latency@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.data.latency@1.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.data.qmi@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.data.qmi@1.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.fingerprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.fingerprint@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.fm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.fm@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.iop@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.iop@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.iop@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.iop@2.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.mwqemadapter@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.mwqemadapter@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.qconfig@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.qconfig@1.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.am@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.am@1.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.atcmdfwd@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.atcmdfwd@1.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.ims@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.ims@1.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.ims@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.ims@1.1.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.ims@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.ims@1.2.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.ims@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.ims@1.3.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.ims@1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.ims@1.4.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.ims@1.5.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.ims@1.5.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.ims@1.6.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.ims@1.6.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.lpa@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.lpa@1.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.lpa@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.lpa@1.1.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.qcrilhook@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.qcrilhook@1.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.qtiradio@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.qtiradio@1.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.qtiradio@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.qtiradio@2.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.qtiradio@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.qtiradio@2.1.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.qtiradio@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.qtiradio@2.2.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.qtiradio@2.3.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.qtiradio@2.3.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.qtiradio@2.4.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.qtiradio@2.4.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.qtiradio@2.5.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.qtiradio@2.5.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.uim@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.uim@1.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.uim@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.uim@1.1.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.uim@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.uim@1.2.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.uim_remote_client@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.uim_remote_client@1.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.uim_remote_client@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.uim_remote_client@1.1.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.uim_remote_client@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.uim_remote_client@1.2.so \
+    vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.radio.uim_remote_server@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.radio.uim_remote_server@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.hardware.vpp@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.vpp@2.0.so \
     vendor/asus/picasso/proprietary/vendor/lib/vendor.qti.voiceprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.voiceprint@1.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/DataSet/Almalence/Asus_Picasso_tele.cfg:$(TARGET_COPY_OUT_VENDOR)/lib64/DataSet/Almalence/Asus_Picasso_tele.cfg \
+    vendor/asus/picasso/proprietary/vendor/lib64/DataSet/Almalence/Asus_Picasso_tele_Single_Frame.cfg:$(TARGET_COPY_OUT_VENDOR)/lib64/DataSet/Almalence/Asus_Picasso_tele_Single_Frame.cfg \
+    vendor/asus/picasso/proprietary/vendor/lib64/DataSet/Almalence/Asus_Picasso_ultra_wide.cfg:$(TARGET_COPY_OUT_VENDOR)/lib64/DataSet/Almalence/Asus_Picasso_ultra_wide.cfg \
+    vendor/asus/picasso/proprietary/vendor/lib64/DataSet/Almalence/Asus_Picasso_ultra_wide_Single_Frame.cfg:$(TARGET_COPY_OUT_VENDOR)/lib64/DataSet/Almalence/Asus_Picasso_ultra_wide_Single_Frame.cfg \
+    vendor/asus/picasso/proprietary/vendor/lib64/DataSet/Almalence/Asus_Picasso_wide_bin.cfg:$(TARGET_COPY_OUT_VENDOR)/lib64/DataSet/Almalence/Asus_Picasso_wide_bin.cfg \
+    vendor/asus/picasso/proprietary/vendor/lib64/DataSet/Almalence/Asus_Picasso_wide_bin_Single_Frame.cfg:$(TARGET_COPY_OUT_VENDOR)/lib64/DataSet/Almalence/Asus_Picasso_wide_bin_Single_Frame.cfg \
+    vendor/asus/picasso/proprietary/vendor/lib64/DataSet/Almalence/Asus_Picasso_wide_remosaic.cfg:$(TARGET_COPY_OUT_VENDOR)/lib64/DataSet/Almalence/Asus_Picasso_wide_remosaic.cfg \
+    vendor/asus/picasso/proprietary/vendor/lib64/DataSet/Almalence/Asus_Picasso_wide_remosaic_Single_Frame.cfg:$(TARGET_COPY_OUT_VENDOR)/lib64/DataSet/Almalence/Asus_Picasso_wide_remosaic_Single_Frame.cfg \
     vendor/asus/picasso/proprietary/vendor/lib64/DataSet/arch/DIT_List.cfg:$(TARGET_COPY_OUT_VENDOR)/lib64/DataSet/arch/DIT_List.cfg \
     vendor/asus/picasso/proprietary/vendor/lib64/DataSet/ditSCidGen/msgchk.db:$(TARGET_COPY_OUT_VENDOR)/lib64/DataSet/ditSCidGen/msgchk.db \
     vendor/asus/picasso/proprietary/vendor/lib64/DataSet/ispDB/ParameterDB.db:$(TARGET_COPY_OUT_VENDOR)/lib64/DataSet/ispDB/ParameterDB.db \
-    vendor/asus/picasso/proprietary/vendor/lib64/android.hardware.secure_element@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.secure_element@1.0-impl.so \
     vendor/asus/picasso/proprietary/vendor/lib64/btaudio_offload_if.so:$(TARGET_COPY_OUT_VENDOR)/lib64/btaudio_offload_if.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/arcsoft_dc_calibration_t.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/arcsoft_dc_calibration_t.bin \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/arcsoft_dc_calibration_u.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/arcsoft_dc_calibration_u.bin \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/arcsoft_dc_calibration_w.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/arcsoft_dc_calibration_w.bin \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/arcsoft_eis_configure:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/arcsoft_eis_configure \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.eeprom.truly_cmb433.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.eeprom.truly_cmb433.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.sensor.imx363_s.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.imx363_s.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.sensor.imx663_s.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.imx663_s.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.sensor.imx686.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.imx686.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.sensor.imx686_16m.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.imx686_16m.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.sensor.imx686_16m_s.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.imx686_16m_s.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.sensor.imx686_s.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.imx686_s.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.sensor.ov13855_rear_aux.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.ov13855_rear_aux.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.sensor.ov13b10.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.ov13b10.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.sensor.ov24b1q.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.ov24b1q.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.sensor.imx363_p.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.imx363_p.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.sensor.imx686_16m_p.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.imx686_16m_p.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.sensor.imx686_p.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.imx686_p.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.sensor.ov08a10_p.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.ov08a10_p.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.sensor.ov24b1q_p.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.ov24b1q_p.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.sensor.ov8856.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.ov8856.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.sensormodule.imx363_s.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.imx363_s.bin \
-    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.sensormodule.imx663_s.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.imx663_s.bin \
-    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.sensormodule.imx686_16m_s.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.imx686_16m_s.bin \
-    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.sensormodule.imx686_s.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.imx686_s.bin \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.sensormodule.imx686_16m_p.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.imx686_16m_p.bin \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.sensormodule.imx686_p.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.imx686_p.bin \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.sensormodule.liteon_imx363_p.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.liteon_imx363_p.bin \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.sensormodule.ov08a10_p.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.ov08a10_p.bin \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.sensormodule.ov24b1q_p.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.ov24b1q_p.bin \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.tuned.default.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.tuned.default.bin \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.tuned.imx363.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.tuned.imx363.bin \
-    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.tuned.imx663.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.tuned.imx663.bin \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.tuned.imx686.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.tuned.imx686.bin \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.tuned.ov08a.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.tuned.ov08a.bin \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/com.qti.tuned.ov24b1q.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.tuned.ov24b1q.bin \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.arc.node.eisv2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.arc.node.eisv2.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.arc.node.eisv3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.arc.node.eisv3.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.arcsoft.node.autozoom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.arcsoft.node.autozoom.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.arcsoft.node.smooth_transition.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.arcsoft.node.smooth_transition.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.arcsoft.node.supernightraw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.arcsoft.node.supernightraw.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.asus.node.preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.asus.node.preview.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.asus.node.video.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.asus.node.video.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.camx.chiiqutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.camx.chiiqutils.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.eisv2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.eisv2.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.eisv3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.eisv3.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.hvx.addconstant.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.hvx.addconstant.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.hvx.binning.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.hvx.binning.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.node.Almalence.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.node.Almalence.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.node.customhwnode.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.node.customhwnode.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.node.depth.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.node.depth.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.node.dewarp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.node.dewarp.so \
@@ -948,6 +1004,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.node.formatconversion.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.node.formatconversion.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.node.gpu.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.node.gpu.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.node.memcpy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.node.memcpy.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.node.mffusion.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.node.mffusion.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.node.ml.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.node.ml.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.node.remosaic.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.node.remosaic.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.node.stich.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.node.stich.so \
@@ -957,6 +1014,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.node.swlsc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.node.swlsc.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.node.swmctf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.node.swmctf.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.node.swmfnr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.node.swmfnr.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.node.swpdpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.node.swpdpc.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.node.swpreprocess.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.node.swpreprocess.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.node.swregistration.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.node.swregistration.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.stats.aec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.aec.so \
@@ -966,6 +1024,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.stats.afd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.afd.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.stats.afwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.afwrapper.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.stats.asd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.asd.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.stats.autoroi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.autoroi.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.stats.awb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.awb.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.stats.awbwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.awbwrapper.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qti.stats.cnndriver.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.stats.cnndriver.so \
@@ -979,16 +1038,21 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qtistatic.stats.af.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qtistatic.stats.af.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qtistatic.stats.awb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qtistatic.stats.awb.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qtistatic.stats.pdlib.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.vidhance.node.processing.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.vidhance.node.processing.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/camera/components/com.vidhance.stats.aec_dmbr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.vidhance.stats.aec_dmbr.so \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/components/libdepthmapwrapper_secure.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/libdepthmapwrapper_secure.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/camera/dut_IMX363_S.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/dut_IMX363_S.bin \
-    vendor/asus/picasso/proprietary/vendor/lib64/camera/dut_IMX663_S.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/dut_IMX663_S.bin \
-    vendor/asus/picasso/proprietary/vendor/lib64/camera/dut_IMX686_S.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/dut_IMX686_S.bin \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/components/libubifocus.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/libubifocus.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/dut_IMX363_P.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/dut_IMX363_P.bin \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/dut_IMX686_P.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/dut_IMX686_P.bin \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/dut_OV08A10_P.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/dut_OV08A10_P.bin \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/dut_OV24B1Q_P.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/dut_OV24B1Q_P.bin \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/fdconfigpreview.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigpreview.bin \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/fdconfigpreviewlite.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigpreviewlite.bin \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/fdconfigvideo.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigvideo.bin \
     vendor/asus/picasso/proprietary/vendor/lib64/camera/fdconfigvideolite.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigvideolite.bin \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/template_0.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/template_0.bin \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/template_1.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/template_1.bin \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/template_2.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/template_2.bin \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/template_6.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/template_6.bin \
+    vendor/asus/picasso/proprietary/vendor/lib64/camera/template_7.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/template_7.bin \
     vendor/asus/picasso/proprietary/vendor/lib64/com.qti.chiusecaseselector.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.chiusecaseselector.so \
     vendor/asus/picasso/proprietary/vendor/lib64/com.qti.feature2.anchorsync.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.feature2.anchorsync.so \
     vendor/asus/picasso/proprietary/vendor/lib64/com.qti.feature2.arcrawpro.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.feature2.arcrawpro.so \
@@ -1044,13 +1108,12 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so \
     vendor/asus/picasso/proprietary/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so \
     vendor/asus/picasso/proprietary/vendor/lib64/hw/android.hardware.gnss@2.1-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.gnss@2.1-impl-qti.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/hw/android.hardware.health@2.0-impl-2.1-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.health@2.0-impl-2.1-qti.so \
     vendor/asus/picasso/proprietary/vendor/lib64/hw/audio.bluetooth_qti.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.bluetooth_qti.default.so \
     vendor/asus/picasso/proprietary/vendor/lib64/hw/audio.primary.lahaina.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.primary.lahaina.so \
     vendor/asus/picasso/proprietary/vendor/lib64/hw/camera.qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/camera.qcom.so \
     vendor/asus/picasso/proprietary/vendor/lib64/hw/com.dsi.ant@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/com.dsi.ant@1.0-impl.so \
     vendor/asus/picasso/proprietary/vendor/lib64/hw/com.qti.chi.override.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/com.qti.chi.override.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/hw/fingerprint.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.default.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/hw/fingerprint_er1.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint_er1.default.so \
     vendor/asus/picasso/proprietary/vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so \
     vendor/asus/picasso/proprietary/vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.gnss@4.0-impl.so \
     vendor/asus/picasso/proprietary/vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so \
@@ -1060,7 +1123,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so \
     vendor/asus/picasso/proprietary/vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so \
     vendor/asus/picasso/proprietary/vendor/lib64/hw/vendor.qti.hardware.eid@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.eid@1.0-impl.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so \
     vendor/asus/picasso/proprietary/vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so \
     vendor/asus/picasso/proprietary/vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so \
     vendor/asus/picasso/proprietary/vendor/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so \
@@ -1079,7 +1141,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib64/lib-rtpsl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-rtpsl.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libAlacSwDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libAlacSwDec.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libApeSwDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libApeSwDec.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/libAsusBspCam_hidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libAsusBspCam_hidl.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libC2D2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libC2D2.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libCB.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCB.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libFlacSwDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libFlacSwDec.so \
@@ -1104,6 +1165,11 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib64/libQSEEComAPI.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libQSEEComAPI.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libQTEEConnector_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libQTEEConnector_vendor.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libQnnHtpAltPrepStub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libQnnHtpAltPrepStub.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/libQnnHtpStub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libQnnHtpStub.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/libSuperSensor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSuperSensor.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/libSuperSensorCPU.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSuperSensorCPU.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/libSuperSensorProcessor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSuperSensorProcessor.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/libSuperSensorProcessorCWrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSuperSensorProcessorCWrapper.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libTouchInputVM.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTouchInputVM.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libTrustedInput.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTrustedInput.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libTrustedInputTZ.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTrustedInputTZ.so \
@@ -1124,21 +1190,18 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib64/libaidenoiser.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaidenoiser.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libappclassifier.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libappclassifier.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libarcsoft_beautyshot.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_beautyshot.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/libarcsoft_bokehplus_image_rear.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_bokehplus_image_rear.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libarcsoft_bokehplus_video.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_bokehplus_video.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libarcsoft_face_detection.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_face_detection.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libarcsoft_face_tracking.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_face_tracking.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/libarcsoft_fringe_remove.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_fringe_remove.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libarcsoft_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_hdr.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libarcsoft_low_light_shot.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_low_light_shot.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/libarcsoft_multicamautozoom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_multicamautozoom.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libarcsoft_nighthawk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_nighthawk.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libarcsoft_picselfie_algorithm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_picselfie_algorithm.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libarcsoft_piczoom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_piczoom.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/libarcsoft_qnnhtp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_qnnhtp.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libarcsoft_rer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_rer.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/libarcsoft_scbokeh_image.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_scbokeh_image.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/libarcsoft_scbokeh_video.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_scbokeh_video.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libarcsoft_super_night_raw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_super_night_raw.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/libarcsoft_superresolution.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_superresolution.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libasn1cper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libasn1cper.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libasn1crt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libasn1crt.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libasn1crtx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libasn1crtx.so \
@@ -1149,6 +1212,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib64/libaudioparsers.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudioparsers.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libbase64.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbase64.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libbatching.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbatching.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/libbatterylistener.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbatterylistener.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libbitmlengine.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbitmlengine.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libbluetooth_audio_session_qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_audio_session_qti.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libbt-hidlclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbt-hidlclient.so \
@@ -1211,8 +1275,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib64/libgcs.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgcs.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libgdtap.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgdtap.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libgeofencing.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgeofencing.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/libgf_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgf_hal.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/libgf_hal_er1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgf_hal_er1.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libgnss.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgnss.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libgnsspps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgnsspps.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libgplaf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgplaf.so \
@@ -1280,6 +1342,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib64/libofflinedump.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libofflinedump.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libofflinelog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libofflinelog.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libopencv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libopencv.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/libopencv3a.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libopencv3a.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libopestriping.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libopestriping.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libops.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libops.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libos.so \
@@ -1326,6 +1389,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib64/libqdcm-mode-parser.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdcm-mode-parser.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libqdi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdi.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libqdp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdp.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/libqfp-service.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqfp-service.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libqisl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqisl.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libqll10.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqll10.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libqllengine.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqllengine.so \
@@ -1377,6 +1441,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib64/libsdmutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdmutils.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libsdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdsprpc.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libsecureui_svcsock.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsecureui_svcsock.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/libsensor_hal_l5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensor_hal_l5.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libsensorslog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensorslog.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libsi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsi.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libskewknob.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libskewknob.so \
@@ -1414,9 +1479,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib64/libtinyxml2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinyxml2_1.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libtrustedapploader.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtrustedapploader.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libtzdrmgenprov.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtzdrmgenprov.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libvideooptfeature.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvideooptfeature.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/libvidhance.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvidhance.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libvppclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvppclient.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libvpphcp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvpphcp.so \
     vendor/asus/picasso/proprietary/vendor/lib64/libvpphvx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvpphvx.so \
@@ -1443,6 +1506,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib64/qtiwakelock.so:$(TARGET_COPY_OUT_VENDOR)/lib64/qtiwakelock.so \
     vendor/asus/picasso/proprietary/vendor/lib64/rfsa/adsp/libsns_device_mode_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/rfsa/adsp/libsns_device_mode_skel.so \
     vendor/asus/picasso/proprietary/vendor/lib64/rfsa/adsp/libsns_low_lat_stream_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/rfsa/adsp/libsns_low_lat_stream_skel.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/sensors.hal.tof.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.hal.tof.so \
     vendor/asus/picasso/proprietary/vendor/lib64/sensors.ssc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.ssc.so \
     vendor/asus/picasso/proprietary/vendor/lib64/soundfx/libasphere.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libasphere.so \
     vendor/asus/picasso/proprietary/vendor/lib64/soundfx/libqcbassboost.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcbassboost.so \
@@ -1453,8 +1517,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib64/unnhal-acc-common.so:$(TARGET_COPY_OUT_VENDOR)/lib64/unnhal-acc-common.so \
     vendor/asus/picasso/proprietary/vendor/lib64/unnhal-acc-gpu.so:$(TARGET_COPY_OUT_VENDOR)/lib64/unnhal-acc-gpu.so \
     vendor/asus/picasso/proprietary/vendor/lib64/unnhal-acc-htp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/unnhal-acc-htp.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/vendor.asus.bspcam@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.asus.bspcam@1.0-impl.so \
-    vendor/asus/picasso/proprietary/vendor/lib64/vendor.asus.bspcam@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.asus.bspcam@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.display.color@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.display.color@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.1.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.display.color@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.2.so \
@@ -1467,6 +1529,8 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.pixelworks.hardware.feature@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.pixelworks.hardware.feature@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.data.factory@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.factory@2.0.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.data.factory@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.factory@2.1.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.data.factory@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.factory@2.2.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.data.mwqem@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.mwqem@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.data.slm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.slm@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.diaghal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.diaghal@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.esepowermanager@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.esepowermanager@1.0.so \
@@ -1498,9 +1562,11 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.eid@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.eid@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.factory@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.factory@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.factory@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.factory@1.1.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.fingerprint@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.fm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.fm@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.iop@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.iop@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.iop@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.iop@2.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.mwqemadapter@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.mwqemadapter@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.qccsyshal@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.qconfig@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.qconfig@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.qdutils_disp@1.0.so \
@@ -1525,6 +1591,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qtiradio@2.2.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qtiradio@2.3.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qtiradio@2.4.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.qtiradio@2.5.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim@1.1.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim@1.2.so \
@@ -1537,6 +1604,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.slmadapter@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.soter@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.soter@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.trustedui@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.trustedui@1.0.so \
+    vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.trustedui@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.trustedui@1.1.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.tui_comm@1.0.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.vpp@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.vpp@1.1.so \
     vendor/asus/picasso/proprietary/vendor/lib64/vendor.qti.hardware.vpp@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.vpp@1.2.so \
@@ -1562,6 +1630,7 @@ PRODUCT_PACKAGES += \
     CACertService \
     CneApp \
     IWlanService \
+    QFingerprintService \
     TimeService \
     com.qualcomm.qti.gpudrivers.lahaina.api30 \
     PowerOffAlarm \
