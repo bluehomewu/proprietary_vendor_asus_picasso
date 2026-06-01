@@ -38,24 +38,30 @@ ________________________________________________________________________________
                 <Prop Name="vendor.perf.iop_v3.enable.debug" Value="false" />
                 <Prop Name="vendor.enable.prefetch" Value="false" />
                 <Prop Name="vendor.iop.enable_prefetch_ofr" Value="false" />
-                <Prop Name="vendor.iop.enable_speed" Value="true" Target="lahaina" />
-                <Prop Name="vendor.perf.fps_switch_hyst_time_secs" Value="20" Target="lahaina" />
+                <Prop Name="vendor.iop.enable_speed" Value="true" />
+                <Prop Name="vendor.perf.fps_switch_hyst_time_secs" Value="20" />
                 <Prop Name="vendor.debug.enable.memperfd" Value="true" Target="shima" />
                 <Prop Name="vendor.perf.pfar.enable" Value="1" Target="shima" />
                 <Prop Name="vendor.perf.fps_switch.enable" Value="1" Target="shima" />
                 <Prop Name="ro.vendor.perf.gfl.tap_ignore_enable" Value="true" Target="shima" />
                 <Prop Name="ro.vendor.perf.wlc.heavygame" Value="true" Target="shima" />
                 <Prop Name="ro.vendor.perf.gfl_hg_assured_min_threshold" Value="0" Target="lahaina" />
-                <Prop Name="ro.vendor.perf.splh" Value="none" Target="shima" />
-                <Prop Name="ro.vendor.perf.gplaf" Value="false" Target="shima" />
+                <Prop Name="ro.vendor.perf.splh" Value="sw" Target="shima" />
+                <Prop Name="ro.vendor.perf.gplaf" Value="true" Target="shima" />
                 <Prop Name="ro.vendor.perf.enable.prekill" Value="false" Target="lahaina" />
 
                 <!--System Properties -->
-                <Prop Name="ro.lmk.thrashing_limit_pct_dup" Value="30" />
                 <Prop Name="ro.lmk.kill_heaviest_task_dup" Value="true" />
                 <Prop Name="ro.lmk.kill_timeout_ms_dup" Value="100" />
+                <Prop Name="ro.lmk.thrashing_threshold" Value="30" />
+                <Prop Name="ro.lmk.thrashing_decay" Value="5" />
+                <Prop Name="ro.lmk.nstrat_low_swap" Value="10" />
+                <Prop Name="ro.lmk.nstrat_psi_partial_ms" Value="70" />
+                <Prop Name="ro.lmk.nstrat_psi_complete_ms" Value="70" />
+                <Prop Name="ro.lmk.psi_scrit_complete_stall_ms" Value="75" />
+                <Prop Name="ro.lmk.nstrat_wmark_boost_factor" Value="4" />
                 <Prop Name="vendor.perf.gestureflingboost.enable" Value="true" />
-                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="60" />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="96" />
                 <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="60" Target="shima" />
                 <Prop Name="ro.vendor.at_library" Value="libqti-at.so" />
                 <Prop Name="vendor.perf.performancemode.support" Value="true" Target="lahaina" />
@@ -89,6 +95,12 @@ ________________________________________________________________________________
                 <Prop Name="vendor.perf.pfar2.boost_level" Value="1" Target="lahaina"/>
                 <Prop Name="vendor.perf.pfar2.disable_pl" Value="1" Target="lahaina"/>
                 <Prop Name="vendor.perf.pfar2.disable_core_ctl" Value="1" Target="lahaina"/>
+                <Prop Name="vendor.perf.phr.enable" Value="1" Target="shima"/>
+                <Prop Name="vendor.perf.phr.hr_min_rate" Value="0.5" Target="shima"/>
+                <Prop Name="vendor.perf.pfar2.enable" Value="1" Target="shima"/>
+                <Prop Name="vendor.perf.pfar2.boost_level" Value="1" Target="shima"/>
+                <Prop Name="vendor.perf.pfar2.disable_pl" Value="1" Target="shima"/>
+                <Prop Name="vendor.perf.pfar2.disable_core_ctl" Value="1" Target="shima"/>
 
     </PerfConfigs>
 </PerfConfigsStore>

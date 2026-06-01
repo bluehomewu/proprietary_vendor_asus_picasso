@@ -14,4 +14,3 @@ game_rv
 rotv
 oem1
 step_detect
-free_fall

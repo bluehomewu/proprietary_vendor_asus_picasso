@@ -1,8 +1,8 @@
 {
   "config":
   {
-    "hw_platform": ["QRD", "MTP", "Dragon", "Surf", "HDK"],
-    "soc_id": ["415", "439"]
+    "hw_platform": ["MTP", "Dragon", "Surf", "HDK", "IDP", "QRD"],
+    "soc_id": ["291", "246", "305", "336", "339", "341", "347", "360", "361", "356", "415", "439"]
   },
   "icm4x6xx_0":{
     "owner": "icm4x6xx",

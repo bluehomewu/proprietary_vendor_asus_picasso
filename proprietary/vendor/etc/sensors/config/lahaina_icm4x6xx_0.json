@@ -1,7 +1,7 @@
 {
   "config":{
-    "hw_platform": ["MTP", "Dragon", "Surf", "HDK", "QRD"],
-    "soc_id": ["415", "439"]
+    "hw_platform": ["MTP", "Dragon", "Surf", "HDK", "QRD", "RCM"],
+    "soc_id": ["339", "340", "361", "356", "415", "439"]
   },
   "icm4x6xx_0_platform":{
     "owner": "icm4x6xx",
@@ -14,6 +14,9 @@
         "data": "3"
       },
       "slave_config":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "min_bus_speed_khz":{ "type": "int", "ver": "0",
         "data": "0"
       },
       "max_bus_speed_khz":{ "type": "int", "ver": "0",
@@ -35,16 +38,13 @@
         "data": "0"
       },
       "irq_trigger_type":{ "type": "int", "ver": "0",
-        "data": "1"
+        "data": "3"
       },
       "num_rail":{ "type": "int", "ver": "0",
         "data": "1"
       },
       "rail_on_state":{ "type": "int", "ver": "0",
         "data": "2"
-      },
-      "vdd_rail":{ "type": "str", "ver": "0",
-        "data": "/pmic/client/sensor_vdd"
       },
       "vddio_rail":{ "type": "str", "ver": "0",
         "data": "/pmic/client/sensor_vddio"
@@ -59,10 +59,10 @@
         "data": "-x"
       },
       "y":{ "type": "str", "ver": "0",
-        "data": "+y"
+        "data": "-y"
       },
       "z":{ "type": "str", "ver": "0",
-        "data": "-z"
+        "data": "+z"
       }
     },
     ".gyro":{
@@ -185,7 +185,7 @@
       ".config":{
         "owner": "icm4x6xx",
         "thresh":{ "type": "flt", "ver": "0",
-            "data": "0.3132"
+            "data": "0.6132"
         },
         "disable":{ "type": "int", "ver": "0",
           "data": "0"

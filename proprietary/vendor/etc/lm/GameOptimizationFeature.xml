@@ -24,9 +24,9 @@
         <Enable>1</Enable>
         <STATIC_L0>1</STATIC_L0>
         <AGPE>1</AGPE>
-        <GFAR>0</GFAR>
+        <GFAR>1</GFAR>
         <STUTTER_SCALE>10</STUTTER_SCALE>
-        <PICARD>0</PICARD>
+        <PICARD>1</PICARD>
         <IDLE_SENSE>0</IDLE_SENSE>
         <THERMAL_MONITOR>1</THERMAL_MONITOR>
         <THERMAL_MONITOR_RULES>GAME_OPT_TSENS_RULE1,GAME_OPT_TSENS_RULE2,GAME_OPT_TSENS_RULE3</THERMAL_MONITOR_RULES>
@@ -43,7 +43,7 @@
         <Enable>1</Enable>
         <ATML1>1</ATML1>
         <ATML2>1</ATML2>
-        <ATML3>1</ATML3>
+        <ATML3>0</ATML3>
         <GFAR>1</GFAR>
         <PICARD>0</PICARD>
         <IDLE_SENSE>0</IDLE_SENSE>
@@ -95,9 +95,9 @@
         </Profile>
         <Profile target="lahaina">
             <!-- Colocation v3 1 GHz -->
-            <DEFAULT>0x40c6c000,1000000</DEFAULT>
+            <DEFAULT>0x40c6c000,1000000,0x40CA8000,2</DEFAULT>
             <!-- Colocation v3 1 GHz -->
-            <SKEW2>0x40c6c000,1000000</SKEW2>
+            <SKEW2>0x40c6c000,1000000,0x40CA8000,2</SKEW2>
         </Profile>
         <Profile target="shima">
             <!-- Colocation v3 1 GHz, Predictive Load 1, Sched Many Wake Up Threshold 4 ,LPM IPI Prediction 0 -->
