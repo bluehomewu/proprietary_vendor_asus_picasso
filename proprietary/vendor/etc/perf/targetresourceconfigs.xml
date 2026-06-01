@@ -39,8 +39,6 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0x3" MinorValue="0x17" Supported="no" /> <!-- sched_freq_aggr_threshold -->
         <Config MajorValue="0x3" MinorValue="0x22" Supported="no" Target="shima" /> <!-- sched_task_unfilter_nr_windows -->
 
-        <Config MajorValue="0x5" MinorValue="0x12" Supported="no"  Kernel="5.4" /> <!-- down_rate_limit_us not suppported on kernel 5.4 -->
-
         <Config MajorValue="0x6" MinorValue="0x0" Node="/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/min_freq" Target="lahaina" />
         <Config MajorValue="0x6" MinorValue="0x1" Node="/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/bw_hwmon/decay_rate" Target="lahaina" />
         <Config MajorValue="0x6" MinorValue="0x2" Node="/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/bw_hwmon/io_percent" Target="lahaina" />
@@ -82,6 +80,8 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0xD" MinorValue="0x2" Node="/sys/class/devfreq/18590100.qcom,cpu4-cpu-l3-lat/mem_latency/ratio_ceil" />
         <Config MajorValue="0xD" MinorValue="0x3" Node="/sys/class/devfreq/18590100.qcom,cpu0-cpu-l3-lat/mem_latency/stall_floor" />
         <Config MajorValue="0xD" MinorValue="0x4" Node="/sys/class/devfreq/18590100.qcom,cpu4-cpu-l3-lat/mem_latency/stall_floor" />
+        <Config MajorValue="0xD" MinorValue="0x5" Supported="no" Target="shima"/>
+        <Config MajorValue="0xD" MinorValue="0x6" Supported="no" Target="shima" />
 
     </PerfResources>
 </ResourceConfigs>

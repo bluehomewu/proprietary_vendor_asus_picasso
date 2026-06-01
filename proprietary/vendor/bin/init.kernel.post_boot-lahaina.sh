@@ -42,69 +42,39 @@ function configure_zram_parameters() {
 
 	let RamSizeGB="( $MemTotal / 1048576 ) + 1"
 	diskSizeUnit=M
-
-	#add for Settings set (can setting for only >=12G ; when set, the value will be 4G;)
-	echo "[init.kernel.post_boot-lahaina.sh]RamSizeGB=$RamSizeGB" > /dev/kmsg
-	disksize=`getprop vendor.zram.disksize`
-	zram_enable=`getprop vendor.zram.enable`
-	if test "$disksize" = ""; then
-	disksize="4096M"
+	if [ $RamSizeGB -le 2 ]; then
+		let zRamSizeMB="( $RamSizeGB * 1024 ) * 3 / 4"
+	else
+		let zRamSizeMB="( $RamSizeGB * 1024 ) / 2"
 	fi
-	if test "$zram_enable" = "1"; then  #only RamSizeGB>=12G may go here
-		if [ $RamSizeGB -le 7 ]; then  #this is for 6G; or the value will be 4G(8G,12G,16G,18G,etc)
-			disksize="( $RamSizeGB * 1024 ) / 2""M"
-		fi
-		swapoff /dev/block/zram0 2>/dev/kmsg
-		echo 1 > sys/block/zram0/reset 2>/dev/kmsg
-		sleep 1
+
+	# use MB avoid 32 bit overflow
+	if [ $zRamSizeMB -gt 4096 ]; then
+		let zRamSizeMB=4096
+	fi
+
+	#if [ "$low_ram" == "true" ]; then
 		echo lz4 > /sys/block/zram0/comp_algorithm
-		echo $disksize > /sys/block/zram0/disksize 2>/dev/kmsg
-		mkswap /dev/block/zram0 2>/dev/kmsg
-		swapon /dev/block/zram0 -p 32758 2>/dev/kmsg
-		echo "[init.kernel.post_boot-lahaina.sh]write zram disksize=${disksize}" > /dev/kmsg
-	elif test "$zram_enable" = "0"; then
-		swapoff /dev/block/zram0 2>/dev/kmsg
-		echo "[init.kernel.post_boot-lahaina.sh]turn off the zram" > /dev/kmsg
-	else  #the default case;
-	  # if RAM >= 16G, skip ZRAM
-	  echo "[init.kernel.post_boot-lahaina.sh]default case for zram" > /dev/kmsg
-	  if [ $RamSizeGB -le 12 ]; then
-		if [ $RamSizeGB -le 2 ]; then
-			let zRamSizeMB="( $RamSizeGB * 1024 ) * 3 / 4"
-		else
-			let zRamSizeMB="( $RamSizeGB * 1024 ) / 2"
+	#fi
+
+	if [ -f /sys/block/zram0/disksize ]; then
+		if [ -f /sys/block/zram0/use_dedup ]; then
+			echo 1 > /sys/block/zram0/use_dedup
+		fi
+		echo "$zRamSizeMB""$diskSizeUnit" > /sys/block/zram0/disksize
+
+		# ZRAM may use more memory than it saves if SLAB_STORE_USER
+		# debug option is enabled.
+		if [ -e /sys/kernel/slab/zs_handle ]; then
+			echo 0 > /sys/kernel/slab/zs_handle/store_user
+		fi
+		if [ -e /sys/kernel/slab/zspage ]; then
+			echo 0 > /sys/kernel/slab/zspage/store_user
 		fi
 
-		# use MB avoid 32 bit overflow
-		if [ $zRamSizeMB -gt 4096 ]; then
-			let zRamSizeMB=4096
-		fi
-
-		#if [ "$low_ram" == "true" ]; then
-			echo lz4 > /sys/block/zram0/comp_algorithm
-		#fi
-
-		if [ -f /sys/block/zram0/disksize ]; then
-			if [ -f /sys/block/zram0/use_dedup ]; then
-				echo 1 > /sys/block/zram0/use_dedup
-			fi
-			echo "$zRamSizeMB""$diskSizeUnit" > /sys/block/zram0/disksize
-
-			# ZRAM may use more memory than it saves if SLAB_STORE_USER
-			# debug option is enabled.
-			if [ -e /sys/kernel/slab/zs_handle ]; then
-				echo 0 > /sys/kernel/slab/zs_handle/store_user
-			fi
-			if [ -e /sys/kernel/slab/zspage ]; then
-				echo 0 > /sys/kernel/slab/zspage/store_user
-			fi
-
-			mkswap /dev/block/zram0
-			swapon /dev/block/zram0 -p 32758
-		fi
-	  fi
+		mkswap /dev/block/zram0
+		swapon /dev/block/zram0 -p 32758
 	fi
-	setprop vendor.asus.zram_setting 1
 }
 
 function configure_read_ahead_kb_values() {
@@ -151,11 +121,10 @@ function configure_memory_parameters() {
 	# Set allocstall_threshold to 0 for all targets.
 	#
 
-	configure_zram_parameters
+#	configure_zram_parameters
 	configure_read_ahead_kb_values
 	echo 0 > /proc/sys/vm/page-cluster
 	echo 100 > /proc/sys/vm/swappiness
-        echo 1 > /proc/sys/vm/watermark_scale_factor
 }
 
 rev=`cat /sys/devices/soc0/revision`
