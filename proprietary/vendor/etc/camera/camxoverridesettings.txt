@@ -1,11 +1,11 @@
-multiCameraEnable=1
+multiCameraEnable=0
 #multiCameraEnableFront=1
 enableSensorFpsMatch=TRUE
-multiCameraFrameSync=1
-enableSensorHWSync=TRUE
+multiCameraFrameSync=0
+enableSensorHWSync=FALSE
 multiCamera3ASync=QTI
 exportSecureCamera=TRUE
-enableNCSService=TRUE
+enableNCSService=FALSE
 overrideLogLevels=0x83
 logVerboseMask=0
 logInfoMask=0
