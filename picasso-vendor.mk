@@ -175,15 +175,6 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd \
     vendor/asus/picasso/proprietary/vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.10.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.10.pmd \
     vendor/asus/picasso/proprietary/vendor/etc/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
-    vendor/asus/picasso/proprietary/vendor/etc/audio/picasso/audio_effects_picasso.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/picasso/audio_effects_picasso.xml \
-    vendor/asus/picasso/proprietary/vendor/etc/audio/picasso/audio_io_policy_picasso.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio/picasso/audio_io_policy_picasso.conf \
-    vendor/asus/picasso/proprietary/vendor/etc/audio/picasso/audio_platform_info_intcodec_picasso.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/picasso/audio_platform_info_intcodec_picasso.xml \
-    vendor/asus/picasso/proprietary/vendor/etc/audio/picasso/audio_policy_configuration_picasso.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/picasso/audio_policy_configuration_picasso.xml \
-    vendor/asus/picasso/proprietary/vendor/etc/audio/picasso/audio_policy_volumes_picasso.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/picasso/audio_policy_volumes_picasso.xml \
-    vendor/asus/picasso/proprietary/vendor/etc/audio/picasso/default_volume_tables_picasso.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/picasso/default_volume_tables_picasso.xml \
-    vendor/asus/picasso/proprietary/vendor/etc/audio/picasso/mixer_paths_picasso.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/picasso/mixer_paths_picasso.xml \
-    vendor/asus/picasso/proprietary/vendor/etc/audio/picasso/r_submix_audio_policy_configuration_picasso.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/picasso/r_submix_audio_policy_configuration_picasso.xml \
-    vendor/asus/picasso/proprietary/vendor/etc/audio/picasso/sound_trigger_mixer_paths_picasso.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/picasso/sound_trigger_mixer_paths_picasso.xml \
     vendor/asus/picasso/proprietary/vendor/etc/camera/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt \
     vendor/asus/picasso/proprietary/vendor/etc/camera/eisoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/eisoverridesettings.txt \
     vendor/asus/picasso/proprietary/vendor/etc/charger_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fstab.qti \
