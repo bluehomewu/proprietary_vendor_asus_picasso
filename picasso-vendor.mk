@@ -1175,26 +1175,26 @@ PRODUCT_PACKAGES += \
     vendor.qti.ims.rcsconfig@2.1 \
     vendor.qti.imsrtpservice@3.0-service-Impl \
     vendor.qti.imsrtpservice@3.0_vendor \
-    capi_v2_aptX_CLHDADV_Encoder \
-    libQ6MSFR_manager_skel \
-    libQnnHtpAltPrepSkel \
-    libVppQnnHtp \
-    libadsp_jpege_skel \
-    libapps_mem_heap \
-    libbitml_nsp_skel \
-    libcamera_nn_skel \
-    libcvpdsp_2_1 \
-    libdspCV_skel \
-    libdsp_streamer_binning \
-    libfastcvadsp \
-    libfastcvdsp_skel \
-    libmctfengine_skel \
-    libscveObjectSegmentation_skel \
-    libscveT2T_skel \
-    libsns_device_mode_skel \
-    libsns_low_lat_stream_skel \
-    libsuper_res_networks \
-    libvpt_action_recognition \
+    vendor_lib_rfsa_adsp_capi_v2_aptX_CLHDADV_Encoder_so \
+    vendor_lib_rfsa_adsp_libQ6MSFR_manager_skel_so \
+    vendor_lib_rfsa_adsp_libQnnHtpAltPrepSkel_so \
+    vendor_lib_rfsa_adsp_libVppQnnHtp_so \
+    vendor_lib_rfsa_adsp_libadsp_jpege_skel_so \
+    vendor_lib_rfsa_adsp_libapps_mem_heap_so \
+    vendor_lib_rfsa_adsp_libbitml_nsp_skel_so \
+    vendor_lib_rfsa_adsp_libcamera_nn_skel_so \
+    vendor_lib_rfsa_adsp_libcvpdsp_2_1_so \
+    vendor_lib_rfsa_adsp_libdspCV_skel_so \
+    vendor_lib_rfsa_adsp_libdsp_streamer_binning_so \
+    vendor_lib_rfsa_adsp_libfastcvadsp_so \
+    vendor_lib_rfsa_adsp_libfastcvdsp_skel_so \
+    vendor_lib_rfsa_adsp_libmctfengine_skel_so \
+    vendor_lib_rfsa_adsp_libscveObjectSegmentation_skel_so \
+    vendor_lib_rfsa_adsp_libscveT2T_skel_so \
+    vendor_lib_rfsa_adsp_libsns_device_mode_skel_so \
+    vendor_lib_rfsa_adsp_libsns_low_lat_stream_skel_so \
+    vendor_lib_rfsa_adsp_libsuper_res_networks_so \
+    vendor_lib_rfsa_adsp_libvpt_action_recognition_so \
     libmmosal \
     libmmparser_lite \
     com.qualcomm.qti.dpm.api@1.0 \
