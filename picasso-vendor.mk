@@ -406,6 +406,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/picasso/proprietary/vendor/firmware/adsp.b26:$(TARGET_COPY_OUT_VENDOR)/firmware/adsp.b26 \
     vendor/asus/picasso/proprietary/vendor/firmware/adsp.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/adsp.mdt \
     vendor/asus/picasso/proprietary/vendor/firmware/amss.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/amss.bin \
+    vendor/asus/picasso/proprietary/vendor/firmware/bdwlan.e47:$(TARGET_COPY_OUT_VENDOR)/firmware/bdwlan.e47 \
     vendor/asus/picasso/proprietary/vendor/firmware/cdsp.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/cdsp.b00 \
     vendor/asus/picasso/proprietary/vendor/firmware/cdsp.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/cdsp.b01 \
     vendor/asus/picasso/proprietary/vendor/firmware/cdsp.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/cdsp.b02 \
