@@ -26798,17 +26798,6 @@ android_app_import {
 }
 
 android_app_import {
-    name: "QFingerprintService",
-    owner: "asus",
-    apk: "proprietary/vendor/app/QFingerprintService/QFingerprintService.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    soc_specific: true,
-}
-
-android_app_import {
     name: "TimeService",
     owner: "asus",
     apk: "proprietary/vendor/app/TimeService/TimeService.apk",
@@ -26864,6 +26853,17 @@ android_app_import {
     },
     privileged: true,
     product_specific: true,
+}
+
+android_app_import {
+    name: "QFingerprintService",
+    owner: "asus",
+    apk: "proprietary/system_ext/app/QFingerprintService/QFingerprintService.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    system_ext_specific: true,
 }
 
 android_app_import {
